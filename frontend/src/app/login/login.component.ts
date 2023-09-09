@@ -32,7 +32,7 @@ export class LoginComponent {
         if (resultData.status) 
         {
       
-           this.router.navigateByUrl('/home');
+           this.router.navigateByUrl('/userhome');
     
 
         } 
