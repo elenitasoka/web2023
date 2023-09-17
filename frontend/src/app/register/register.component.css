@@ -84,3 +84,17 @@ body{
 .login-link p a:hover{
   text-decoration: underline;
 }
+.wrapper .home-link{
+  font-size: 14.5px;
+  text-align:center;
+  margin: 20px 0 15px;
+
+}
+.home-link p a{
+  color:black;
+  text-decoration: none;
+  font-weight: 600;
+}
+.home-link p a:hover{
+  text-decoration: underline;
+}
