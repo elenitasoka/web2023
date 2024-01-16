@@ -33,10 +33,23 @@
                         <i class='bx bxs-lock-alt' ></i>
                     </div>
 
+                    <div class="form-group">
+                        <label for="userType">Select User Type:</label>
+                        <div class="input-with-icon">
+                            <select [(ngModel)]="userType" [ngModelOptions]="{standalone: true}" class="form-control" id="userType" required>
+                                <option value="user">Χρήστης</option>
+                                <option value="rescuer">Διασωστής</option>
+                            </select>
+                            <i class='bx bx-user'></i>
+                        </div>
+                    </div>
+
+
                     <button type="submit" class="btn-primary mt-4" (click)="save()"> Save </button>
                     <div class="login-link">
                         <p>Already a user? <a [routerLink]="['/login']">Login</a></p>
                     </div>
+                  
                 </form>
             </div>
         </div>

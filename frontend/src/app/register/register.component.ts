@@ -12,6 +12,7 @@ export class RegisterComponent {
   lastname:string="";
   email:string="";
   password:string="";
+  userType: string = '';
 
   constructor(private http: HttpClient)
   {
@@ -29,6 +30,7 @@ export class RegisterComponent {
       "lastname": this.lastname,
       "email": this.email,
       "password": this.password,
+      "role":this.userType
     };
     this.http.post("http://localhost:9992/users/create", bodyData).subscribe((resultData: any)=>
     {

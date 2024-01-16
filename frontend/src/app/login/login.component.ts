@@ -28,11 +28,12 @@ export class LoginComponent {
 
         this.http.post("http://localhost:9992/users/login", bodyData).subscribe(  (resultData: any) => {
         console.log(resultData);
+        
 
         if (resultData.status) 
         {
-      
-           this.router.navigateByUrl('/userhome');
+          
+         this.router.navigateByUrl('/userhome');
     
 
         } 
