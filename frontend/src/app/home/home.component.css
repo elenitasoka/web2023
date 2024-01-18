@@ -1,0 +1,52 @@
+.navbar-dark .navbar-nav .nav-link {
+  color:#FFFFFF; /* Χρώμα κειμένου */
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-color: #FFFFFF; /* Χρώμα εικονιδίου toggle */
+}
+
+.navbar-dark .navbar-toggler-icon:focus {
+  outline: none; /* Αφαιρέστε το περίγραμμα όταν γίνεται focus */
+}
+
+.btn-primary {
+  background-color: #FF0000; /* Χρώμα κουμπιού */
+  border-color: #FF0000; /* Χρώμα περιγράμματος κουμπιού */
+}
+.half-image-container {
+  width: 80%; /* Πλάτος του πλαισίου */
+  height: 300px; /* Ύψος του πλαισίου - προσαρμόστε το ύψος όπως θέλετε */
+  background-image: url('karotsi-super-market-gemato.jpg'); /* URL της εικόνας */
+  background-size: 30% 100%; /* Κάνει την εικόνα να καλύπτει το μισό πλάτος του πλαισίου */
+  background-repeat: no-repeat; /* Αποτρέπει την επανάληψη της εικόνας */
+  background-position:center; /* Τοποθετεί την εικόνα στο δεξί κέντρο του πλαισίου */
+}
+.navbar-dark .navbar-nav .nav-link {
+  color:#FFFFFF; /* Χρώμα κειμένου */
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-color: #FFFFFF; /* Χρώμα εικονιδίου toggle */
+}
+
+.navbar-dark .navbar-toggler-icon:focus {
+  outline: none; /* Αφαιρέστε το περίγραμμα όταν γίνεται focus */
+}
+
+.btn-primary {
+  background-color: #FF0000; /* Χρώμα κουμπιού */
+  border-color: #FF0000; /* Χρώμα περιγράμματος κουμπιού */
+}
+.display-5 {
+  color: #000000; /* Μαύρο χρώμα για τον τίτλο */
+}
+
+
+
+
+
+
+
+
+
