@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { MapComponent } from './map/map.component';
+import { AdminMenuComponent } from './admin-menu/admin-menu.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { MapComponent } from './map/map.component';
     HomeComponent,
     UserhomeComponent,
     MapComponent,
+    AdminMenuComponent,
   ],
   imports: [
     BrowserModule,
