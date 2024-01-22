@@ -84,7 +84,6 @@ body{
 .login-link p a:hover{
   text-decoration: underline;
 }
-<<<<<<< HEAD
 /* register.component.css */
 
 .input-with-icon {
@@ -102,7 +101,6 @@ body{
   transform: translateY(-50%);
   color: #aaa; /* Χρώμα του εικονιδίου, προσαρμόστε το όπως θέλετε */
 }
-=======
 .wrapper .home-link{
   font-size: 14.5px;
   text-align:center;
@@ -117,4 +115,3 @@ body{
 .home-link p a:hover{
   text-decoration: underline;
 }
->>>>>>> c279d1deccb25e87053968080ea028a8262ff250
