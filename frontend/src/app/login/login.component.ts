@@ -36,7 +36,6 @@ export class LoginComponent {
 
         if (resultData.status) 
         {
-<<<<<<< HEAD
           this.UserDataService.loadUserData().subscribe((userData: any) => {
             // Αποθηκεύστε τα δεδομένα του χρήστη στο UserDataService
             this.userDataService.setUserData(userData);
@@ -45,13 +44,6 @@ export class LoginComponent {
           
         });
       }
-        
-=======
-          
-         this.router.navigateByUrl('/userhome');
-    
-        } 
->>>>>>> b9c859f4b0f3b9907038a60f079ec54ff08b2473
         else
          {
           alert("Incorrect Email or Password");
