@@ -8,7 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserhomeComponent } from './userhome/userhome.component';
-import { AdminComponent } from './admin/admin.component';
+import { MapComponent } from './map/map.component';
+import { AdminMenuComponent } from './admin-menu/admin-menu.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AdminComponent } from './admin/admin.component';
     RegisterComponent,
     HomeComponent,
     UserhomeComponent,
-    AdminComponent,
+    MapComponent,
+    AdminMenuComponent,
   ],
   imports: [
     BrowserModule,

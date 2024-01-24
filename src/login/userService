@@ -53,3 +53,23 @@ module.exports.loginUserDbService = (userDetails) =>
         });
     });
 }
+module.exports.getUserDataWithoutPasswordDBService = (userId) => {
+    return new Promise((resolve, reject) => {
+      userModel.findOne({ _id: userId }, { password: 0 }, (error, user) => {
+        if (error) {
+          reject(error);
+        } else if (user) {
+          // Αφαιρέστε τον κωδικό πριν επιστρέψετε τα δεδομένα του χρήστη
+          const userDataWithoutPassword = {
+            firstname: user.firstname,
+            lastname: user.lastname,
+            email: user.email,
+          };
+          resolve(userDataWithoutPassword);
+        } else {
+          reject("User not found");
+        }
+      });
+    });
+  };
+  

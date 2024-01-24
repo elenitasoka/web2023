@@ -9,9 +9,10 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url(sm3.avif) no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: url(help.jpg) no-repeat;
+  background-size:auto ;
+  background-position:center;
+  background-repeat: repeat-x;
 }
 .wrapper{
   width: 420px;
@@ -21,17 +22,21 @@ body{
   color:black;
   border-radius: 12px;
   padding: 30px 40px;
+  border: 2px solid black;
+  
 }
 .wrapper h1{
   font-size: 36px;
   text-align: center;
+  
 }
 .wrapper .form-group{
   position: relative;
   width: 100%;
   height: 50px;
-  
   margin: 30px 0;
+  
+  
 }
 .form-group input{
   width: 100%;
@@ -47,6 +52,7 @@ body{
 }
 .form-group input::placeholder{
   color:black;
+  
 }
 .form-group i{
   position: absolute;
@@ -54,8 +60,10 @@ body{
   top: 30%;
   transform: translate(-50%);
   font-size: 20px;
-
+  
+  
 }
+
 .wrapper .btn-primary{
   width: 100%;
   height: 45px;
@@ -68,6 +76,7 @@ body{
   font-size: 16px;
   color:#fff;
   font-weight: 600;
+  
 
 }
 .wrapper .login-link{
@@ -84,7 +93,6 @@ body{
 .login-link p a:hover{
   text-decoration: underline;
 }
-<<<<<<< HEAD
 /* register.component.css */
 
 .input-with-icon {
@@ -93,6 +101,7 @@ body{
 
 .input-with-icon select {
   padding-right: 30px; /* Κάνει το dropdown να μην καλύπτει το εικονίδιο */
+  border-color: rgb(0, 0, 0);
 }
 
 .input-with-icon i {
@@ -100,9 +109,8 @@ body{
   top: 50%;
   right: 10px; /* Ρυθμίζει τη θέση του εικονιδίου */
   transform: translateY(-50%);
-  color: #aaa; /* Χρώμα του εικονιδίου, προσαρμόστε το όπως θέλετε */
+  color:black;/* Χρώμα του εικονιδίου, προσαρμόστε το όπως θέλετε */
 }
-=======
 .wrapper .home-link{
   font-size: 14.5px;
   text-align:center;
@@ -117,4 +125,3 @@ body{
 .home-link p a:hover{
   text-decoration: underline;
 }
->>>>>>> c279d1deccb25e87053968080ea028a8262ff250

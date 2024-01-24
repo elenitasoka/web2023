@@ -34,11 +34,11 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="userType">Select User Type:</label>
+                        <label for="userType"><b>Select User Type:</b></label>
                         <div class="input-with-icon">
                             <select [(ngModel)]="userType" [ngModelOptions]="{standalone: true}" class="form-control" id="userType" required>
-                                <option value="user">Χρήστης</option>
-                                <option value="rescuer">Διασωστής</option>
+                                <option value="user">User</option>
+                                <option value="rescuer">Rescuer</option>
                             </select>
                             <i class='bx bx-user'></i>
                         </div>
@@ -47,7 +47,7 @@
 
                     <button type="submit" class="btn-primary mt-4" (click)="save()"> Save </button>
                     <div class="login-link">
-                        <p>Already a user? <a [routerLink]="['/login']">Login</a></p>
+                        <p>Already have an account? <a [routerLink]="['/login']">Login</a></p>
                     </div>
                     <div class="home-link">
                         <p><a [routerLink]="['/']">Home</a></p>
