@@ -1,14 +1,14 @@
-const Product= require('./productModel')
+const Rescuer= require('./rescuerModel')
 
-exports.getProduct=async(req,res,next)=>{
+exports.getRescuer=async(req,res,next)=>{
 
     try {
-        const product= await Product.find();
+        const rescuer= await Rescuer.find();
 
         return res.status(201).json({
             success:true,
-            count:product.length,
-            data:product
+            count:rescuer.length,
+            data:rescuer
         })
 
 
@@ -19,14 +19,14 @@ exports.getProduct=async(req,res,next)=>{
     }
 }
 
-exports.AddOProduct=async(req,res,next)=>{
+exports.AddRescuer=async(req,res,next)=>{
 
     try {
-        const product=await Product.create(req.body);
+        const rescuer=await Rescuer.create(req.body);
 
         return res.status(201).json({ //201 kodikos gia petuxhmenh leitourgia
             success:true,
-            data:product
+            data:rescuer
         })
 
     } catch (error) {

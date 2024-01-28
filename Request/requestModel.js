@@ -1,9 +1,9 @@
 var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 
-var offersSchema=new Schema({
+var requestSchema = new Schema({
 
-    OfferID: Number,
+    RequestID: Number,
     Uname:String,
     Uphone:Number,
     ReqDate:Date,
@@ -14,7 +14,7 @@ var offersSchema=new Schema({
     Status: Boolean,
     Vname: String
 
-    
 
 });
-module.exports =mongoose.model('offers',offersSchema)
+
+module.exports=mongoose.model('requests', requestSchema);

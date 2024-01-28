@@ -1,32 +1,32 @@
-const Offers=require('./offersmodel')
+const Requests=require('./requestModel')
 
-exports.getOffers=async(req,res,next)=>{
+exports.getRequests=async(req,res,next)=>{
 
     try {
-        const offers= await Offers.find();
+        const Request= await Requests.find();
 
         return res.status(201).json({
             success:true,
-            count:offers.length,
-            data:offers
+            count:Request.length,
+            data:Request
         })
 
 
     } catch (error) {
-        console.log(err);
+        console.log(error);
 
         
     }
 }
 
-exports.AddOffers=async(req,res,next)=>{
+exports.AddRequests=async(req,res,next)=>{
 
     try {
-        const offers=await Offers.create(req.body);
+        const Request=await Requests.create(req.body);
 
         return res.status(201).json({
             success:true,
-            data:offers
+            data:Request
         })
 
 
