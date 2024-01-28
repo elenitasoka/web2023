@@ -4,6 +4,10 @@ const userController = require('../src/login/userController');
 const marketController=require('../markets/marketController');
 const offersController=require('../offers/offersController');
 const productController=require('../product/productController');
+const databaseController=require('../database/databaseController');
+const adminController=require('../admin/adminController');
+const announcementController=require('../announcement/announcementController');
+const vehiclesController=require('../vehicles/vehiclesController');
 const categoryController=require('../category/categoryController');
 const requestController=require('../Request/requestController');
 const rescuerController=require('../rescuer/rescuerController');
@@ -41,5 +45,16 @@ router.route('/task').get(taskController.getTask);
 router.route('/task/create').post(taskController.addTask);
 router.route('/task/delete').post(taskController.deleteTask);
 
+router.route('/database').get(databaseController.getDatabase);
+router.route('/database/create').post(databaseController.AddDatabase);
+
+router.route('/vehicles').get(vehiclesController.getVehicles);
+router.route('/vehicles/create').post(vehiclesController.AddVehicle);
+
+router.route('/announcement').get(announcementController.getAnnouncement);
+router.route('/announcement/create').post(announcementController.AddAnnouncement);
+
+router.route('/admin').get(adminController.getAdmin);
+router.route('/admin/create').post(adminController.AddAdmin);
 module.exports=router;
 
