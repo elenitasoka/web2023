@@ -35,7 +35,7 @@ export class RegisterComponent {
     this.http.post("http://localhost:9992/users/create", bodyData).subscribe((resultData: any)=>
     {
       console.log(resultData);
-      alert("New user registered successfully")
+      alert("You have registered successfully");
     });
   }
 

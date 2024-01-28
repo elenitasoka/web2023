@@ -10,7 +10,7 @@ module.exports.createUserDBService = (userDetails)=> {
         userModelData.firstname=userDetails.firstname;
         userModelData.lastname=userDetails.lastname;
         userModelData.email=userDetails.email;
-        userModelData.password=userDetails.password;
+        userModelData.password=userDetails.password;    
         userModelData.role = userDetails.role;
         var encrypted = encryptor.encrypt(userDetails.password);
         userModelData.password=encrypted;
