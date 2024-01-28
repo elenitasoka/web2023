@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
-import { UserDataService } from './userDataServise';
+
 
 @Component({
   selector: 'app-login',
@@ -13,7 +13,6 @@ export class LoginComponent {
 
   email: string = '';
   password: string = '';
-
   isLogin: boolean = true;
   erroMessage: string = "";
   UserDataService: any;
@@ -27,7 +26,7 @@ export class LoginComponent {
 
     let bodyData = {
       email: this.email,
-      password: this.password,
+      password: this.password
     };
 
         this.http.post("http://localhost:9992/users/login", bodyData).subscribe(  (resultData: any) => {
@@ -36,20 +35,23 @@ export class LoginComponent {
 
         if (resultData.status) 
         {
-          this.UserDataService.loadUserData().subscribe((userData: any) => {
+          //this.UserDataService.loadUserData().subscribe((userData: any) => {
             // Αποθηκεύστε τα δεδομένα του χρήστη στο UserDataService
-            this.userDataService.setUserData(userData);
-            console.log(userData);
-           this.router.navigateByUrl('/userhome');
-          
-        });
-      }
+            //this.userDataService.setUserData(userData);
+            //console.log(userData);
+            this.router.navigateByUrl('/admin-menu');
+            alert("You have successfully logged in");
+           
+        }
+        
         else
          {
           alert("Incorrect Email or Password");
           console.log("Errror login");
         }
       });
+
+
     } 
   }
 

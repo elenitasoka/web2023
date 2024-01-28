@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { MapComponent } from './map/map.component';
+import { AdminMenuComponent } from './admin-menu/admin-menu.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path:'map',
     component:MapComponent
+  },
+  {
+    path:'admin-menu',
+    component:AdminMenuComponent
   }
 
 
