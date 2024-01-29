@@ -1,19 +1,19 @@
 var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 
-
-
-
 var offersSchema=new Schema({
 
-    productId:Number,
-    productName:String,
-    productCategory:String,
-    storeid: String,
-    prices:Number,
-    startDate:Date,
-    endDate:Date,
-    available:Boolean
+    OfferID: Number,
+    Uname:String,
+    Uphone:Number,
+    ReqDate:Date,
+    ProductId:Number,
+    ProductName:String,
+    Ammount:Number,
+    PickupDate:Date,
+    Status: Boolean,
+    Vname: String
+
     
 
 });

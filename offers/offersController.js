@@ -5,7 +5,7 @@ exports.getOffers=async(req,res,next)=>{
     try {
         const offers= await Offers.find();
 
-        return res.status(200).json({
+        return res.status(201).json({
             success:true,
             count:offers.length,
             data:offers
@@ -24,7 +24,7 @@ exports.AddOffers=async(req,res,next)=>{
     try {
         const offers=await Offers.create(req.body);
 
-        return res.status(300).json({
+        return res.status(201).json({
             success:true,
             data:offers
         })

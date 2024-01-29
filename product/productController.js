@@ -5,7 +5,7 @@ exports.getProduct=async(req,res,next)=>{
     try {
         const product= await Product.find();
 
-        return res.status(200).json({
+        return res.status(201).json({
             success:true,
             count:product.length,
             data:product
@@ -13,7 +13,7 @@ exports.getProduct=async(req,res,next)=>{
 
 
     } catch (error) {
-        console.log(err);
+        console.log(error);
 
         
     }
@@ -24,11 +24,10 @@ exports.AddOProduct=async(req,res,next)=>{
     try {
         const product=await Product.create(req.body);
 
-        return res.status(300).json({
+        return res.status(201).json({ //201 kodikos gia petuxhmenh leitourgia
             success:true,
             data:product
         })
-
 
     } catch (error) {
         console.log(error)

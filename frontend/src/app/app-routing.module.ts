@@ -6,7 +6,8 @@ import { RegisterComponent } from './register/register.component';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { MapComponent } from './map/map.component';
 import { AdminMenuComponent } from './admin-menu/admin-menu.component';
-import { AdminComponent } from './admin/admin.component';
+import { RequestpageComponent } from './Requestpage/Requestpage.component';
+import { ReqpageComponent } from './reqpage/reqpage.component';
 
 const routes: Routes = [
   {
@@ -33,10 +34,19 @@ const routes: Routes = [
     component:MapComponent
   },
   {
-    path:'adminMenu',
+    path:'admin-menu',
     component:AdminMenuComponent
   },
-  
+  {
+    path:'Requestpage',
+    component:RequestpageComponent
+  },
+  {
+    path:'reqpage',
+    component:ReqpageComponent
+   }
+
+
 
 ];
 
