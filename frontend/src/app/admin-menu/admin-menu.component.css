@@ -1,0 +1,25 @@
+/* admin-menu.component.css */
+
+.styled-table {
+  max-height: 300px; /* Ύψος του πίνακα */
+  width: 80%; /* Πλάτος του πίνακα */
+  border-collapse: collapse;
+  margin: 25px auto; /* Κεντράρισμα στο κέντρο της σελίδας */
+  font-size: 18px;
+  text-align: left;
+  overflow: auto; /* Εμφάνιση γραμμής κύλισης όταν το περιεχόμενο υπερβαίνει το max-height */
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.styled-table th {
+  background-color: #f2f2f2;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #f5f5f5;
+}

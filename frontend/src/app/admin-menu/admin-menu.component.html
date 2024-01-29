@@ -1,1 +1,15 @@
-<p>admin-menu works!</p>
+<!-- admin-menu.component.html -->
+
+<table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let category of categories; let i = index" (click)="getProductsByCategory(category.id)">
+      <td>{{ i + 1 }}. {{ category.category }}</td>
+    </tr>
+  </tbody>
+</table>
+
