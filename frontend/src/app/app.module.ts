@@ -10,6 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { MapComponent } from './map/map.component';
 import { AdminMenuComponent } from './admin-menu/admin-menu.component';
+import { RequestpageComponent } from './Requestpage/Requestpage.component';
+import { ReqpageComponent } from './reqpage/reqpage.component';
+
 
 
 @NgModule({
@@ -21,6 +24,9 @@ import { AdminMenuComponent } from './admin-menu/admin-menu.component';
     UserhomeComponent,
     MapComponent,
     AdminMenuComponent,
+    RequestpageComponent,
+    ReqpageComponent
+    
   ],
   imports: [
     BrowserModule,
