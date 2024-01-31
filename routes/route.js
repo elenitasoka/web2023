@@ -40,8 +40,10 @@ router.route('/category/create').post(categoryController.AddCategory);
 router.route('/Request').get(requestController.getRequests);
 router.route('/Request/create').post(requestController.AddRequests);
 
+
 router.route('/rescuer').get(rescuerController.getRescuer);
 router.route('/rescuer/create').post(rescuerController.AddRescuer);
+router.route('/rescuer/login').post(rescuerController.loginRescuerControllerFn);
 
 router.route('/task').get(taskController.getTask);
 router.route('/task/create').post(taskController.addTask);

@@ -3,14 +3,12 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
-
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-rescuer-login',
+  templateUrl: './rescuer-login.component.html',
+  styleUrls: ['./rescuer-login.component.css']
 })
-export class LoginComponent {
-
+export class RescuerLoginComponent {
   email: string = '';
   password: string = '';
   isLogin: boolean = true;
@@ -53,5 +51,4 @@ export class LoginComponent {
 
 
     } 
-  }
-
+}

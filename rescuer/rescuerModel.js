@@ -5,6 +5,7 @@ var rescuerSchema = new Schema({
 
     ID: Number,
     usename:String,
+    email:String,
     password:String,
     Vname:String
 

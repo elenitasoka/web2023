@@ -8,6 +8,9 @@ import { MapComponent } from './map/map.component';
 import { AdminMenuComponent } from './admin-menu/admin-menu.component';
 import { RequestpageComponent } from './Requestpage/Requestpage.component';
 import { ReqpageComponent } from './reqpage/reqpage.component';
+import { AdminComponent } from './admin/admin.component';
+import { RescuerLoginComponent } from './rescuer-login/rescuer-login.component';
+
 
 const routes: Routes = [
   {
@@ -44,8 +47,16 @@ const routes: Routes = [
   {
     path:'reqpage',
     component:ReqpageComponent
-   }
+   },
+   {
+    path:'admin',
+    component:AdminComponent
+   },
 
+ {
+    path:'rescuer-login',
+    component:RescuerLoginComponent
+   },
 
 
 ];
