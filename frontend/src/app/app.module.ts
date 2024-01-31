@@ -10,7 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { MapComponent } from './map/map.component';
 import { AdminMenuComponent } from './admin-menu/admin-menu.component';
-
+import { RescuerMenuComponent } from './rescuer-menu/rescuer-menu.component';
+import { FirstPageComponent } from './first-page/first-page.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,9 @@ import { AdminMenuComponent } from './admin-menu/admin-menu.component';
     UserhomeComponent,
     MapComponent,
     AdminMenuComponent,
+    RescuerMenuComponent,
+    FirstPageComponent,
+  
   ],
   imports: [
     BrowserModule,

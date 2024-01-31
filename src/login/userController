@@ -37,24 +37,32 @@ var loginUserControllerFn=async(req, res) => {
     }
 }
 
-var getUserDataControllerFn = async (req, res) => {
-    try {
-      // Λάβετε τον αναγνωριστικό χρήστη από το αίτημα (π.χ., req.params.userId)
-      const userId = req.params.userId;
-  
-      // Καλέστε τη συνάρτηση για να ανακτήσετε τα στοιχεία του χρήστη
-      const userData = await userService.getUserDataWithoutPasswordDBService(userId);
-  
-      if (userData) {
-        res.send({ "status": true, "userData": userData });
-      } else {
-        res.send({ "status": false, "message": "User data not found" });
-      }
-    } catch (err) {
-      console.log(err);
-      res.send({ "status": false, "message": "Error fetching user data" });
-    }
-  }
-  
+/*exports.getUserByEmailFn = async (req, res, next) => {
+    const { email } = req.params; // Υποθέτουμε ότι το email είναι στη διαδρομή
 
-module.exports= {createUserControllerFn, loginUserControllerFn,getUserDataControllerFn};
+    try {
+        const user = await User.findOne({ email });
+
+        if (!user) {
+            return res.status(404).json({
+                success: false,
+                message: "Δεν βρέθηκε χρήστης με αυτό το email.",
+            });
+        }
+
+        return res.status(200).json({
+            success: true,
+            data: user,
+        });
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+            success: false,
+            message: "Σφάλμα κατά την ανάκτηση του χρήστη.",
+        });
+    }
+}; */
+
+
+
+module.exports= {createUserControllerFn, loginUserControllerFn};

@@ -13,11 +13,12 @@ const requestController=require('../Request/requestController');
 const rescuerController=require('../rescuer/rescuerController');
 const taskController=require('../task/taskController');
 
+
 const router=express.Router();
 
 router.route('/users/login').post(userController.loginUserControllerFn);
 router.route('/users/create').post(userController.createUserControllerFn);
-router.route('/users/info').get(userController.getUserDataControllerFn);
+//router.route('/users/find').post(userController.getUserByEmailFn);
 
 
 router.route('/markets').get(marketController.getMarkets);
@@ -40,6 +41,7 @@ router.route('/Request/create').post(requestController.AddRequests);
 
 router.route('/rescuer').get(rescuerController.getRescuer);
 router.route('/rescuer/create').post(rescuerController.AddRescuer);
+
 
 router.route('/task').get(taskController.getTask);
 router.route('/task/create').post(taskController.addTask);

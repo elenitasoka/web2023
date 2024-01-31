@@ -17,6 +17,7 @@ export class LoginComponent {
   erroMessage: string = "";
   UserDataService: any;
   userDataService: any;
+  user:any;
 
   constructor(private router: Router,private http: HttpClient) {}
 
@@ -35,12 +36,19 @@ export class LoginComponent {
 
         if (resultData.status) 
         {
-          //this.UserDataService.loadUserData().subscribe((userData: any) => {
-            // Αποθηκεύστε τα δεδομένα του χρήστη στο UserDataService
-            //this.userDataService.setUserData(userData);
-            //console.log(userData);
-            this.router.navigateByUrl('/admin-menu');
+        
+            this.router.navigateByUrl('/userhome');
             alert("You have successfully logged in");
+
+            this.http.post("http://localhost:9992/users/find", this.email).subscribe((resultData: any) => {
+              console.log(resultData);
+              //this.user = resultData.data.map((item: any) => ({
+                //email: item.email
+            //}));
+
+        console.log(this.user);
+
+    });
            
         }
         

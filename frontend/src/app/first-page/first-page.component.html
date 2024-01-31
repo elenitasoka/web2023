@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>First Page</title>
+        <link rel="stylesheet" type="text/css" href="first-page.component.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    </head>
+
+    <body>
+        <div class="header">
+            <p><b>Please select your role to continue:</b></p>
+        </div>
+
+        <div class="dropdown-container">
+             <select [(ngModel)]="userType" [ngModelOptions]="{standalone: true}" class="dropdown" id="userType" required>
+                <option disabled selected value=""> Select your role</option>
+                <option value="Administrator">  Administrator</option>
+                <option value="Rescuer">Rescuer</option>
+                <option value="User"> User</option>
+            </select>
+        </div>
+        <button class="custom-button" (click)="navigateToPage()">Continue</button>
+    </body>
+</html>

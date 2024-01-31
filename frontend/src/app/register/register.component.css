@@ -9,10 +9,10 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url(help.jpg) no-repeat;
-  background-size:auto ;
-  background-position:center;
-  background-repeat: repeat-x;
+  background: url(lifebuoy.jpg) no-repeat;
+  background-size:contain ;
+  background-position:left;
+
 }
 .wrapper{
   width: 420px;

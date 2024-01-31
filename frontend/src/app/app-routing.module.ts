@@ -6,10 +6,12 @@ import { RegisterComponent } from './register/register.component';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { MapComponent } from './map/map.component';
 import { AdminMenuComponent } from './admin-menu/admin-menu.component';
+import { FirstPageComponent } from './first-page/first-page.component';
+import { RescuerMenuComponent } from './rescuer-menu/rescuer-menu.component';
 
 const routes: Routes = [
   {
-    path:"userhome",
+    path:'userhome',
     component:UserhomeComponent
   }
  ,
@@ -20,6 +22,10 @@ const routes: Routes = [
 
   {
     path:'',
+    component: FirstPageComponent
+  }, 
+  {
+    path:'userPage',
     component: HomeComponent
   }, 
 
@@ -34,6 +40,10 @@ const routes: Routes = [
   {
     path:'admin-menu',
     component:AdminMenuComponent
+  },
+  {
+    path:'rescuer-menu',
+    component:RescuerMenuComponent
   }
 
 

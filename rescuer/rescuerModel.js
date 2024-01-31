@@ -4,7 +4,8 @@ var Schema=mongoose.Schema;
 var rescuerSchema = new Schema({
 
     ID: Number,
-    usename:String,
+    username:String,
+    email:String,
     password:String,
     Vname:String
 
