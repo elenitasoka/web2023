@@ -38,8 +38,6 @@ exports.AddRescuer=async(req,res,next)=>{
     }
 }
 
-
-module.exports.loginRescuerDbService = (rescuerDetails) => {
 var loginRescuer = (rescuerDetails) => {
     return new Promise(function myFn(resolve, reject) {
         rescuerModel.findOne({ email: rescuerDetails.email }, function getresult(errorvalue, result) {
@@ -63,11 +61,7 @@ var loginRescuer = (rescuerDetails) => {
 module.exports.loginRescuerControllerFn=async(req, res) => {
     var result = null;
     try {
-<<<<<<< HEAD
-        result=await loginRescuerDbService(req.body)
-=======
         result=await loginRescuer(req.body)
->>>>>>> e8a76f076190090e9ed39687cc9f2cfe3d6e7015
 
         if(result.status){
             res.send({"status":true, "message":result.msg});

@@ -13,8 +13,7 @@ import { AdminMenuComponent } from './admin-menu/admin-menu.component';
 import { RequestpageComponent } from './Requestpage/Requestpage.component';
 import { ReqpageComponent } from './reqpage/reqpage.component';
 import { RescuerLoginComponent } from './rescuer-login/rescuer-login.component';
-
-
+import { FirstPageComponent } from './first-page/first-page.component';
 
 
 @NgModule({
@@ -29,6 +28,7 @@ import { RescuerLoginComponent } from './rescuer-login/rescuer-login.component';
     RequestpageComponent,
     ReqpageComponent,
     RescuerLoginComponent,
+    FirstPageComponent
     
     
   ],
