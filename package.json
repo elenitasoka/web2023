@@ -9,8 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "mdb-angular-ui-kit": "^6.0.0",
     "mongoose": "^6.10.0",
     "simple-encryptor": "^4.0.0"
   }

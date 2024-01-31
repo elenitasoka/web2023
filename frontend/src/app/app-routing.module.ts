@@ -6,8 +6,9 @@ import { RegisterComponent } from './register/register.component';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { MapComponent } from './map/map.component';
 import { AdminMenuComponent } from './admin-menu/admin-menu.component';
+import { RequestpageComponent } from './Requestpage/Requestpage.component';
+import { ReqpageComponent } from './reqpage/reqpage.component';
 import { FirstPageComponent } from './first-page/first-page.component';
-import { RescuerMenuComponent } from './rescuer-menu/rescuer-menu.component';
 
 const routes: Routes = [
   {
@@ -42,9 +43,14 @@ const routes: Routes = [
     component:AdminMenuComponent
   },
   {
-    path:'rescuer-menu',
-    component:RescuerMenuComponent
-  }
+    path:'Requestpage',
+    component:RequestpageComponent
+  },
+  {
+    path:'reqpage',
+    component:ReqpageComponent
+   }
+
 
 
 ];

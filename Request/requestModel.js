@@ -3,7 +3,7 @@ var Schema=mongoose.Schema;
 
 var requestSchema = new Schema({
 
-    RequestID: Number,
+    RequestID:Number, 
     Uname:String,
     Uphone:Number,
     ReqDate:Date,
@@ -16,5 +16,6 @@ var requestSchema = new Schema({
 
 
 });
+
 
 module.exports=mongoose.model('requests', requestSchema);

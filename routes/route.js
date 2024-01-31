@@ -31,6 +31,8 @@ router.route('/offers/create').post(offersController.AddOffers);
 
 router.route('/product').get(productController.getProduct);
 router.route('/product/create').post(productController.AddOProduct);
+router.route('/product/filter').get(productController.getProductsByCategory);
+
 
 
 router.route('/category').get(categoryController.getCategory);
