@@ -13,7 +13,9 @@ export class AdminMenuComponent {
   }
   public categories: any[] = []; 
   selectedCategoryProducts: any[] = [];
-
+  filteredOffers: any[] = [];
+  categoryId=0;
+  selectedCategoryId: string | null = null;
   ngOnInit(): void
   {
     this.category();
@@ -32,17 +34,24 @@ export class AdminMenuComponent {
   
     });
   }
-   getProductsByCategory(categoryId: string): void {
+   async getProductsByCategory(categoryId: string): Promise<void> {
     console.log(categoryId);
-     this.http.get(`http://localhost:9992/product/filter/${categoryId}`).subscribe((resultData: any) => {
-      console.log(resultData);
-      this.selectedCategoryProducts = resultData.data.map((item: any) => ({
-       id: item.id,
-       name: item.name
-     }));
-        console.log(this.selectedCategoryProducts);    
+    const offersResponse = await fetch(`http://localhost:9992/product`);
+    const offersData = await offersResponse.json();
+     
+      console.log(offersData);
+      
+         
+       this.filteredOffers = offersData.data.filter((offer: any) => offer.category === categoryId);
+      this.selectedCategoryId = categoryId;
+      console.log("Selected Category ID:", this.selectedCategoryId);
 
-    });
+      console.log(this.filteredOffers);
+   
     }
-
+    goBack(): void {
+      this.selectedCategoryId = null;
+    }
+    
+    
   }

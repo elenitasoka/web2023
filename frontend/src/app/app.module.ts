@@ -12,6 +12,8 @@ import { MapComponent } from './map/map.component';
 import { AdminMenuComponent } from './admin-menu/admin-menu.component';
 import { RequestpageComponent } from './Requestpage/Requestpage.component';
 import { ReqpageComponent } from './reqpage/reqpage.component';
+import { RescuerLoginComponent } from './rescuer-login/rescuer-login.component';
+
 
 
 
@@ -25,7 +27,9 @@ import { ReqpageComponent } from './reqpage/reqpage.component';
     MapComponent,
     AdminMenuComponent,
     RequestpageComponent,
-    ReqpageComponent
+    ReqpageComponent,
+    RescuerLoginComponent,
+    
     
   ],
   imports: [

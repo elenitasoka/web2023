@@ -17,13 +17,16 @@
                 <input class="form-control mt-2 mb-2" type="text" [(ngModel)]="searchText" (input)="Search()" placeholder="Search by product" required />
             </div>
             <!-- Πεδίο "Number of People" και κουμπί "Submit Request" -->
-            <div class="col-md-4">
+            
+        </div>
+        <div class="row d-flex mt-3">
+            <div class="col-md-4 offset-md-4">
                 <label for="numberOfPeople">Number of People:</label>
-                <input type="number" [(ngModel)]="numberOfPeople" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="People in distress"  required>
-                <button type="button" (click)="submitRequest()" class="btn btn-primary">Submit Request</button>
+                <input type="number" [(ngModel)]="numberOfPeople" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="People in distress" required>
+                <button type="button" (click)="submitRequest()" class="btn btn-primary mt-2">Submit Request</button>
             </div>
         </div>
-        <table class="table table-striped table-bordered table-sm row-border hover" id="datatableexample">
+        <table class="table table-white table-hover" id="datatableexample">
           <thead>
             <tr>
               <th>ID</th>

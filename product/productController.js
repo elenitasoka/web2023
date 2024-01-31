@@ -37,7 +37,7 @@ exports.AddOProduct=async(req,res,next)=>{
     }
 }
 exports.getProductsByCategory = async (req, res, next) => {
-    const { categoryId } = req.params; // Ανάκτηση της τιμής της παραμέτρου categoryId από το URL
+    const  categoryId  = req.params; // Ανάκτηση της τιμής της παραμέτρου categoryId από το URL
 
     try {
         const products = await Product.find({ category: categoryId });
