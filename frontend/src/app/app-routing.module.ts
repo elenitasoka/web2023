@@ -12,7 +12,7 @@ import { FirstPageComponent } from './first-page/first-page.component';
 import { AdminComponent } from './admin/admin.component';
 import { RescuerLoginComponent } from './rescuer-login/rescuer-login.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-
+import { RescuerMenuComponent } from './rescuer-menu/rescuer-menu.component';
 
 const routes: Routes = [
   {
@@ -68,6 +68,10 @@ const routes: Routes = [
     path:'sidenav',
     component:SidenavComponent
    },
+   {
+    path:'rescuerMenu',
+    component:RescuerMenuComponent
+   }
 
 
 ];

@@ -29,22 +29,14 @@ import { FirstPageComponent } from './first-page/first-page.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    UserhomeComponent,
     MapComponent,
     AdminMenuComponent,
     RequestpageComponent,
     ReqpageComponent,
     RescuerLoginComponent,
     FirstPageComponent
-    
-   
-
-
-    
-   
-    
-    
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -35,7 +35,7 @@ export class RescuerLoginComponent {
         if (resultData.status) 
         {
           
-            this.router.navigateByUrl('/admin-menu');
+            this.router.navigateByUrl('/rescuerMenu');
             alert("You have successfully logged in");
 
             const rescuersResponse = await fetch('http://localhost:9992/rescuer'); //pairnei kai epistrefei olous tous users apo th bash

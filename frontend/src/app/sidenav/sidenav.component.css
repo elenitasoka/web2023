@@ -78,6 +78,10 @@
     margin-right: 5px;
   }
   
+  .bx-user-circle
+  {
+    font-size: 3rem;
+  }
   .user{
     display: flex;
     align-items: center;
@@ -150,8 +154,6 @@
     opacity: 1;
   }
   
-  
-  
   .mat-sidenav .active ul li .tooltip{
     display: none;
   }
@@ -168,7 +170,7 @@
   }
   
   .background-img{
-    width: 70%;
+    width: 55%;
     height: 80%;
     border-radius: 10px;
     position: absolute;
@@ -176,3 +178,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  .bx-menu{
+    font-size: 1.5rem;
+  }
+ 
+
+

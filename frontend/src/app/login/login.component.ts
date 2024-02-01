@@ -15,7 +15,7 @@ export class LoginComponent {
   password: string = '';
   isLogin: boolean = true;
   erroMessage: string = "";
-  filteredusers:any = [];
+  public filteredusers:any = [];
   UserDataService: any;
   userDataService: any;
   user:any;
