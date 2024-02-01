@@ -20,6 +20,9 @@ import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { FirstPageComponent } from './first-page/first-page.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +35,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     RequestpageComponent,
     ReqpageComponent,
     RescuerLoginComponent,
+    FirstPageComponent
     
    
 

@@ -9,7 +9,10 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <!--<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>-->
                         <li class="nav-item"><a class="nav-link" href="about.html"[routerLink]="['/map']">Map</a></li>
+                        <span style="margin-right: 20px;"></span>
                         <button type="button" class="btn btn-primary" [routerLink]="['/login']">Login</button>
+                        <span style="margin-right: 20px;"></span>
+                        <button type="button" class="btn btn-primary" [routerLink]="['/register']">Register</button>
                     </ul>
                 </div>
             </div>
@@ -33,38 +36,19 @@
             </div>
             <div class="container">
               <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                <button type="button" class="btn btn-primary" [routerLink]="['/register']">Register</button>
+                <button type="button" class="btn btn-primary" [routerLink]="['']">Back</button>
               </div>
             </div>
           </div>
-        <!-- Features section-->
-        <section class="py-5" id="features">
-            <div class="container px-5 my-5">
-                <div class="row gx-5">
-                    <!-- <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">The fastest response to your needs.</h2></div>-->
-                    
-                            <div class="col-6 text-center">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
-                                <h2 class="h5">Are you a rescuer?</h2>
-                                <p class="mb-0">If you are a rescuer and you want to directly help those who need you, in cases of natural disasters, you have nothing to do but register on the website!</p>
-                            </div>
-                            <div class="col-6 text-center">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
-                                <h2 class="h5">Are you a citizen and you are afraid of the natural disasters?</h2>
-                                <p class="mb-0">If you are afraid of the natural disasters that happen in our country and you want to know that you can rely on someone who will take care of you and save you in these cases, you should register on our website!</p>
-                            </div>
-                </div>
-            </div>
-        </section>
+
         <!-- Testimonial section-->
         <div class="py-5 bg-light">
             <div class="container px-5 my-5">
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-10 col-xl-7">
                         <div class="text-center">
-                            <div class="fs-4 mb-4">Always here for you!
-                                <span style="font-size: 20px;">🦺</span>
-                            </div>
+                           <h2 class="h5">Are you a citizen and you are afraid of the natural disasters?</h2>
+                                <p class="mb-0">If you are afraid of the natural disasters that happen in our country and you want to know that you can rely on someone who will take care of you and save you in these cases, you should register on our website!</p>
                         </div>                     
                     </div>
                 </div>

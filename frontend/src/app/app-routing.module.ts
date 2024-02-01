@@ -8,6 +8,7 @@ import { MapComponent } from './map/map.component';
 import { AdminMenuComponent } from './admin-menu/admin-menu.component';
 import { RequestpageComponent } from './Requestpage/Requestpage.component';
 import { ReqpageComponent } from './reqpage/reqpage.component';
+import { FirstPageComponent } from './first-page/first-page.component';
 import { AdminComponent } from './admin/admin.component';
 import { RescuerLoginComponent } from './rescuer-login/rescuer-login.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
@@ -15,7 +16,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 
 const routes: Routes = [
   {
-    path:"userhome",
+    path:'userhome',
     component:UserhomeComponent
   }
  ,
@@ -26,6 +27,10 @@ const routes: Routes = [
 
   {
     path:'',
+    component: FirstPageComponent
+  }, 
+  {
+    path:'userPage',
     component: HomeComponent
   }, 
 

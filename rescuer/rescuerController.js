@@ -38,7 +38,6 @@ exports.AddRescuer=async(req,res,next)=>{
     }
 }
 
-
 var loginRescuer = (rescuerDetails) => {
     return new Promise(function myFn(resolve, reject) {
         rescuerModel.findOne({ email: rescuerDetails.email }, function getresult(errorvalue, result) {

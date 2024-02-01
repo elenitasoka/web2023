@@ -27,32 +27,38 @@ module.exports.createUserDBService = (userDetails)=> {
 
 }
 
-module.exports.loginUserDbService = (userDetails) =>
-{
-    return new Promise(function myFn(resolve, reject)
-    {
-        userModel.findOne({email:userDetails.email}, function getresult(errorvalue, result)
-        {
-            if(errorvalue)
-            {
-                reject({status: false, msg:"Invalid Data"});
-            } else{
-                if(result !=undefined && result !=null)
-                {
-                    var decrypted =encryptor.decrypt (result.password);
-                    if(decrypted==userDetails.password)
-                    {
-                        resolve({status: true, msg: "User validated successfully"});
-                    }else{
-                        reject({status: false, msg:"User validated failed"});
-                    } 
-                }else{
-                    reject({status: false, msg: "Invalid user details"});
+module.exports.loginUserDbService = (userDetails) => {
+    return new Promise(function myFn(resolve, reject) {
+        userModel.findOne({ email: userDetails.email }, function getresult(errorvalue, result) {
+            if (errorvalue) {
+                reject({ status: false, msg: "Invalid Data" });
+            } else {
+                if (result != undefined && result != null) {
+                    var decrypted = encryptor.decrypt(result.password);
+                    if (decrypted == userDetails.password) {
+                        // Epituxis sundesi. Epistrefontai ta stoixeia tou xrhsth
+                        resolve({
+                            status: true,
+                            msg: "User validated successfully",
+                            user: {
+                                id: result._id,
+                                firstname: result.firstname,
+                                lastname: result.lastname,
+                            }
+                    
+                        });
+                    } else {
+                        reject({ status: false, msg: "User validation failed" });
+                    }
+                } else {
+                    reject({ status: false, msg: "Invalid user details" });
                 }
             }
         });
     });
 }
+
+
 module.exports.getUserDataWithoutPasswordDBService = (userId) => {
     return new Promise((resolve, reject) => {
       userModel.findOne({ _id: userId }, { password: 0 }, (error, user) => {

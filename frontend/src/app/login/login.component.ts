@@ -15,8 +15,10 @@ export class LoginComponent {
   password: string = '';
   isLogin: boolean = true;
   erroMessage: string = "";
+  filteredusers:any = [];
   UserDataService: any;
   userDataService: any;
+  user:any;
 
   constructor(private router: Router,private http: HttpClient) {}
 
@@ -29,21 +31,28 @@ export class LoginComponent {
       password: this.password
     };
 
-        this.http.post("http://localhost:9992/rescuer/login", bodyData).subscribe(  (resultData: any) => {
+        this.http.post("http://localhost:9992/users/login", bodyData).subscribe(  async (resultData: any) => {
         console.log(resultData);
         
 
         if (resultData.status) 
         {
-          //this.UserDataService.loadUserData().subscribe((userData: any) => {
-            // Αποθηκεύστε τα δεδομένα του χρήστη στο UserDataService
-            //this.userDataService.setUserData(userData);
-            //console.log(userData);
-            this.router.navigateByUrl('/admin-menu');
-            alert("You have successfully logged in");
-           
-        }
         
+            this.router.navigateByUrl('/userhome');
+            alert("You have successfully logged in");
+
+            const usersResponse = await fetch('http://localhost:9992/users'); //pairnei kai epistrefei olous tous users apo th bash
+            const usersData = await usersResponse.json(); //ta bazei se morfi json
+          
+            console.log(usersData);
+          
+          
+            this.filteredusers = usersData.data.filter((user: any) => user.email === this.email);
+          
+            console.log(this.filteredusers);
+
+          console.log(this.user);
+        }
         else
          {
           alert("Incorrect Email or Password");
