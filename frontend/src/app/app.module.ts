@@ -13,10 +13,13 @@ import { AdminMenuComponent } from './admin-menu/admin-menu.component';
 import { RequestpageComponent } from './Requestpage/Requestpage.component';
 import { ReqpageComponent } from './reqpage/reqpage.component';
 import { RescuerLoginComponent } from './rescuer-login/rescuer-login.component';
-
-
-
-
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
+import {MatButtonModule} from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,15 +33,29 @@ import { RescuerLoginComponent } from './rescuer-login/rescuer-login.component';
     ReqpageComponent,
     RescuerLoginComponent,
     
+   
+
+
+    
+   
+    
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

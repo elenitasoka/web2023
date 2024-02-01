@@ -10,6 +10,7 @@ import { RequestpageComponent } from './Requestpage/Requestpage.component';
 import { ReqpageComponent } from './reqpage/reqpage.component';
 import { AdminComponent } from './admin/admin.component';
 import { RescuerLoginComponent } from './rescuer-login/rescuer-login.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 
 const routes: Routes = [
@@ -56,6 +57,11 @@ const routes: Routes = [
  {
     path:'rescuer-login',
     component:RescuerLoginComponent
+   },
+
+   {
+    path:'sidenav',
+    component:SidenavComponent
    },
 
 

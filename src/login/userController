@@ -1,4 +1,5 @@
 var userService = require('./userService');
+var user=require('./userModel');
 
 var createUserControllerFn=async(req, res) =>
 {
@@ -55,6 +56,23 @@ var getUserDataControllerFn = async (req, res) => {
       res.send({ "status": false, "message": "Error fetching user data" });
     }
   }
-  
+  var getUsers=async(req,res,next)=>{
 
-module.exports= {createUserControllerFn, loginUserControllerFn,getUserDataControllerFn};
+    try {
+        const users= await user.find();
+
+        return res.status(201).json({
+            success:true,
+            count:users.length,
+            data:users
+        })
+
+
+    } catch (error) {
+        console.log(error);
+
+        
+    }
+}
+
+module.exports= {createUserControllerFn, loginUserControllerFn,getUserDataControllerFn,getUsers};
