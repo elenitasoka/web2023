@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -10,20 +9,22 @@
         <link rel="stylesheet" href="userhome.component.css">
 
     </head>
-    <body>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')">
         <div class="sidebar">
             <div class="top">
                 <div class="logo">
                     <i class="bx bxl-codepen"></i>
                     <span> Rescue Zone</span>
                 </div>
-                <i class="bx bx-menu" id="btn"></i>
+                
             </div>
             <div class="user">
-                <img src="user-profile.png" alt="user" class="user-img">
+                <i class='bx bx-user-circle' ></i>
                 <div>
-                    <p class="bold"> UserFullname</p>
-                    <p>User</p>
+                    <!--<p class="bold"> </p>-->
+
+                    <p>{{logindata.filteredUsers[0]?.firstname}}</p>
                 </div>
             </div>
             <ul>
@@ -65,21 +66,20 @@
             </ul>
 
         </div>
+       
+       
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <!-- Κουμπί για να ανοίγει/κλείνει το sidebar -->
+        <p><button mat-button (click)="sidenav.toggle()"><i class="bx bx-menu" id="btn"></i></button></p>
 
         <div class="main-content">
             <div class="container">
                 <h1>Rescue Zone</h1>
-                <img src="first-aid-kit.jpg" alt="background" class="background-img">
+                <img src="help.jpg" alt="background" class="background-img">
             </div>
         </div>
-
-    </body>
-
-    <script>
-        let btn=document.querySelector('#btn')
-        let sidebar=document.querySelector('.sidebar')
-        btn.onclick = function(){
-            sidebar.classList.toggle('active');
-        };
-    </script>
-</html>
+       
+    </mat-sidenav-content>
+</mat-sidenav-container>

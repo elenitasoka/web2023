@@ -1,26 +1,26 @@
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Rescuer Home</title>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title> User Home</title>
         <!--link for the icons-->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="rescuer-menu.component.css">
 
     </head>
-    <body>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')">
         <div class="sidebar">
             <div class="top">
                 <div class="logo">
                     <i class="bx bxl-codepen"></i>
                     <span> Rescue Zone</span>
                 </div>
-                <i class="bx bx-menu" id="btn"></i>
+                
             </div>
-            <div class="user">
-                <img src="rescuer-icon.jpg" alt="user" class="user-img">
+            <div class="rescuer">
+                <i class='bx bx-hard-hat'></i>
                 <div>
                     <p class="bold"> RescuerFullname</p>
                     <p>Rescuer</p>
@@ -36,22 +36,22 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class='bx bx-map-pin' ></i>
+                        <i class='bx bxs-map-pin' ></i>
                         <span class="nav-item">Maps</span>
                     </a>
                     <span class="tooltip">Maps</span>
                 </li>
                 <li>
                     <a href="#">
-                        <i class='bx bx-task'></i>
+                        <i class='bx bx-task' ></i>
                         <span class="nav-item">Tasks</span>
                     </a>
                     <span class="tooltip">Tasks</span>
                 </li>
                 <li>
                     <a href="#">
-                        <i class='bx bxs-bus'></i>
-                        <span class="nav-item">VehicleCargo</span>
+                        <i class='bx bxs-bus' ></i>
+                        <span class="nav-item">Vehicle Cargo</span>
                     </a>
                     <span class="tooltip">Vehicle Cargo</span>
                 </li>
@@ -65,21 +65,20 @@
             </ul>
 
         </div>
+       
+       
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <!-- Κουμπί για να ανοίγει/κλείνει το sidebar -->
+        <p><button mat-button (click)="sidenav.toggle()"><i class="bx bx-menu" id="btn"></i></button></p>
 
         <div class="main-content">
             <div class="container">
                 <h1>Rescue Zone</h1>
-                <img src="rescue.png" alt="background" class="background-img">
+                <img src="help.jpg" alt="background" class="background-img">
             </div>
         </div>
-
-    </body>
-
-    <script>
-        let btn=document.querySelector('#btn')
-        let sidebar=document.querySelector('.sidebar')
-        btn.onclick = function(){
-            sidebar.classList.toggle('active');
-        };
-    </script>
-</html>
+       
+    </mat-sidenav-content>
+</mat-sidenav-container>

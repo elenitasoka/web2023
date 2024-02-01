@@ -11,6 +11,7 @@ import { AuthService } from '../auth.service';
 export class RescuerLoginComponent {
   email: string = '';
   password: string = '';
+  filteredRescuers: any= [];
   isLogin: boolean = true;
   erroMessage: string = "";
   UserDataService: any;
@@ -27,18 +28,25 @@ export class RescuerLoginComponent {
       password: this.password
     };
 
-        this.http.post("http://localhost:9992/rescuer/login", bodyData).subscribe(  (resultData: any) => {
+        this.http.post("http://localhost:9992/rescuer/login", bodyData).subscribe(  async (resultData: any) => {
         console.log(resultData);
         
 
         if (resultData.status) 
         {
-          //this.UserDataService.loadUserData().subscribe((userData: any) => {
-            // Αποθηκεύστε τα δεδομένα του χρήστη στο UserDataService
-            //this.userDataService.setUserData(userData);
-            //console.log(userData);
-            this.router.navigateByUrl('/admin-menu');
+          
+            this.router.navigateByUrl('/rescuerMenu');
             alert("You have successfully logged in");
+
+            const rescuersResponse = await fetch('http://localhost:9992/rescuer'); //pairnei kai epistrefei olous tous users apo th bash
+            const rescuersData = await rescuersResponse.json(); //ta bazei se morfi json
+          
+            console.log(rescuersData);
+          
+          
+            this.filteredRescuers = rescuersData.data.filter((rescuer: any) => rescuer.email === this.email);
+          
+            console.log(this.filteredRescuers);
            
         }
         
