@@ -24,7 +24,7 @@
                 <div>
                     <!--<p class="bold"> </p>-->
 
-                    <p>{{logindata.filteredUsers[0]?.firstname}}</p>
+                    <p>{{loginDataService.filteredUsers[0]?.firstname}}</p>
                 </div>
             </div>
             <ul>
@@ -40,7 +40,8 @@
                         <i class='bx bx-basket' ></i>
                         <span class="nav-item">Requests</span>
                     </a>
-                    <span class="tooltip">Requests</span>
+                    <span class="tooltip"><button type="button" class="btn btn-primary" [routerLink]="['/reqpage']">Requests</button></span> <!--κουμπι μετάβασης για την σελίδα reqpage-->
+                    
                 </li>
                 <li>
                     <a href="#">

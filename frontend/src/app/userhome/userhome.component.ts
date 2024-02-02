@@ -9,27 +9,30 @@ import { SidebarModule } from '@syncfusion/ej2-angular-navigations';
 import { ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule } from '@syncfusion/ej2-angular-buttons';
 import { ListViewModule } from '@syncfusion/ej2-angular-lists';
 import { loginData } from '../login/loginData.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-userhome',
   standalone: true,
-  imports: [ListViewModule,SidebarModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,MatSidenavModule,FormsModule,ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule],
+  imports: [ListViewModule,SidebarModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,MatSidenavModule,FormsModule,ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule,RouterModule],
   templateUrl: './userhome.component.html',
   styleUrls: ['./userhome.component.css']
 })
 export class UserhomeComponent {
-  constructor(public logindata: loginData) {}
+  constructor(public loginDataService: loginData) {}
   events: string[] = [];
   opened!: boolean;  
   showRequestsAndOffers: boolean = false;
   
   showData(){ //sunarthsh gia na emfanisei ta stoixeia tou xrhsth sto console
-    console.log(this.logindata.filteredUsers);
-    console.log(this.logindata.filteredUsers[0]);
+    console.log("edwpera:",this.loginDataService.filteredUsers);
+  
   } 
   
   ngOnInit() : void{
-    this.showData();
+    setTimeout(() => {
+      this.showData();
+    }, 5000); //Υλοπο
   }
 
 

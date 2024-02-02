@@ -8,4 +8,5 @@ import { Injectable } from '@angular/core';
 })
 export class loginData {
     public filteredUsers: any[] = [];
+    
 }
