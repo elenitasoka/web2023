@@ -8,31 +8,18 @@ import {MatButtonModule} from '@angular/material/button';
 import { SidebarModule } from '@syncfusion/ej2-angular-navigations';
 import { ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule } from '@syncfusion/ej2-angular-buttons';
 import { ListViewModule } from '@syncfusion/ej2-angular-lists';
-import { loginData } from '../login/loginData.component';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
-  selector: 'app-userhome',
+  selector: 'app-admin-home',
   standalone: true,
-  imports: [ListViewModule,SidebarModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,MatSidenavModule,FormsModule,ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule],
-  templateUrl: './userhome.component.html',
-  styleUrls: ['./userhome.component.css']
+  imports: [ListViewModule,SidebarModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,MatSidenavModule,FormsModule,ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule, RouterModule],
+  templateUrl: './admin-home.component.html',
+  styleUrl: './admin-home.component.css'
 })
-export class UserhomeComponent {
-  constructor(public logindata: loginData) {}
+export class AdminHomeComponent {
   events: string[] = [];
   opened!: boolean;  
   showRequestsAndOffers: boolean = false;
-  
-  showData(){ //sunarthsh gia na emfanisei ta stoixeia tou xrhsth sto console
-    //console.log(this.logindata.filteredUsers);
-    console.log(this.logindata.filteredUsers[0]);
-  } 
-  
-  ngOnInit() : void{
-    this.showData();
-  }
-
-
-  
 }
-
