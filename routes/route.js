@@ -43,6 +43,7 @@ router.route('/category/create').post(categoryController.AddCategory);
 
 router.route('/Request').get(requestController.getRequests);
 router.route('/Request/create').post(requestController.AddRequests);
+router.route('/Request/latest').get(requestController.getLatestRequest);
 
 
 router.route('/rescuer').get(rescuerController.getRescuer);

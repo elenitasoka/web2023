@@ -61,19 +61,27 @@ Search(){
       this.Search();
     }
     submitRequest() {
+      const selectedGroup = this.listOfProducts.find((group:any) => group.name === this.searchText); //επιλογή αντικειμένων που έχουν το όνομα του searchText
+     
+      //αντίστροφη ταξινόμηση των Requests με βάση το ID και επιλογή του πρώτου.
+      this.http.get("http://localhost:9992/Request/latest").subscribe((latestRequest: any) => {
+      const latestRequestId = latestRequest.data.RequestID;
+     
+      //δημιουργία body δεδομένων που θα χρησιμοποιήσουμε για την δημιουργία Request
       const newRequest = {
-        RequestID: this.i++, // Χρήση της τρέχουσας τιμής της i και αύξηση κατά 1
-        Uname: 'john doe', // Συμπληρώστε με τον κατάλληλο τρόπο
-        Uphone: 123456789, // Συμπληρώστε με τον κατάλληλο τρόπο
-        ReqDate: new Date(), // Συμπληρώστε με τον κατάλληλο τρόπο
-        ProductId: 1, // Συμπληρώστε με τον κατάλληλο τρόπο
-        "ProductName": this.searchText, // Χρησιμοποιούμε την τιμή από το requestType
+        RequestID: latestRequestId + 1, // Χρήση της τιμής της i του τελευταίου request που δημιουργήθηκε με αύξηση κατά 1
+        Uname: 'john doe', // 
+        Uphone: 123456789, // 
+        ReqDate: new Date(), // Σημερινή ημερωμηνία
+        ProductId: selectedGroup.id, //χρήση του id με βάση το name που αναζητησε ο χρήστης
+        "ProductName": this.searchText, // Χρησιμοποιούμε την τιμή από την αναζήτηση
         "Ammount": this.numberOfPeople, // Χρησιμοποιούμε την τιμή από το numberOfPeople
-        PickupDate: '', // Συμπληρώστε με τον κατάλληλο τρόπο
-        Status: false, // Συμπληρώστε με τον κατάλληλο τρόπο
-        Vname: '' // Συμπληρώστε με τον κατάλληλο τρόπο
+        PickupDate: '', 
+        Status: false, 
+        Vname: '' 
         
       };
+      
       console.log(this.requestType);
       this.http.post("http://localhost:9992/Request/create", newRequest).subscribe((resultData: any) => {
         console.log(resultData);
@@ -82,5 +90,7 @@ Search(){
         this.requestType = '';
         this.numberOfPeople = 0;
       });
-    }
+    });
   }
+}
+ 

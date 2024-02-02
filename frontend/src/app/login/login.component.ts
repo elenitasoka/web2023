@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+import { loginData } from './loginData.component';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
+  loginData: loginData = new loginData();
   email: string = '';
   password: string = '';
   isLogin: boolean = true;
@@ -20,7 +21,7 @@ export class LoginComponent {
   userDataService: any;
   user:any;
 
-  constructor(private router: Router,private http: HttpClient) {}
+  constructor(private router: Router,private http: HttpClient, private loginDataService: loginData) {}
 
   login() {
     console.log(this.email);
@@ -44,14 +45,10 @@ export class LoginComponent {
             const usersResponse = await fetch('http://localhost:9992/users'); //pairnei kai epistrefei olous tous users apo th bash
             const usersData = await usersResponse.json(); //ta bazei se morfi json
           
-            console.log(usersData);
-          
-          
-            this.filteredusers = usersData.data.filter((user: any) => user.email === this.email);
-          
-            console.log(this.filteredusers);
-
-          console.log(this.user);
+            
+            this.filteredusers = usersData.data.filter((user: any) => user.email === this.email);//επιλογή μόνο του χρήστη που κανει login με βαση το email του.
+            this.loginDataService.filteredUsers = this.filteredusers; //επιστροφή των δεδομένων  στην service loginData με σκοπο την χρήση τους σε άλλα σημεία της εφαρμογής
+           
         }
         else
          {
