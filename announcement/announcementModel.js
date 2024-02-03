@@ -5,7 +5,8 @@ var Schema=mongoose.Schema;
 
 var AnnouncementSchema=new Schema({
 
-    ProductName:String
+    ProductName:String,
+    ProductID:String
 
 
 

@@ -32,7 +32,7 @@ export class UserhomeComponent {
   ngOnInit() : void{
     setTimeout(() => {
       this.showData();
-    }, 5000); //Υλοπο
+    }, 5000); //καθυστερηση 5 δευτερολεπτα μεχρι 
   }
 
 
