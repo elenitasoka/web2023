@@ -24,8 +24,7 @@ export class UserhomeComponent {
   showRequestsAndOffers: boolean = false;
   
   showData(){ //sunarthsh gia na emfanisei ta stoixeia tou xrhsth sto console
-    console.log(this.logindata.filteredUsers);
-    console.log(this.logindata.filteredUsers[0]);
+  
   } 
   
   ngOnInit() : void{

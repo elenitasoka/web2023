@@ -25,24 +25,32 @@
 
 
 
-<div *ngIf="selectedCategoryId">
+<div *ngIf="selectedCategoryId && !selectedProductId">
   <button (click)="goBack()">Back to Categories</button>
   <table class="table table-dark table-hover">
     <thead>
       <tr>
         <th>ID</th>
         <th>Name</th>
-       
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let product of filteredOffers; let i = index">
+      <tr *ngFor="let product of filteredOffers; let i = index" (click)="selectProduct(product.id,product.name)">
         <td>{{ product.id }}</td>
         <td>{{ product.name }}</td>
-        
       </tr>
     </tbody>
   </table>
+
+  <!-- Εμφάνιση φόρμας μετά την επιλογή προϊόντος -->
+  <div *ngIf="selectedProduct && formVisible">
+    <form (ngSubmit)="onSubmit()">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" [(ngModel)]="selectedProductQuantity" required>
+      <button type="submit" (click)="informdatabase()">Submit</button>
+      
+    </form>
+  </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>

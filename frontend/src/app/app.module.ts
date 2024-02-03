@@ -21,6 +21,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { FirstPageComponent } from './first-page/first-page.component';
+import { NewRescuerComponent } from './new-rescuer/new-rescuer.component';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import { FirstPageComponent } from './first-page/first-page.component';
     RequestpageComponent,
     ReqpageComponent,
     RescuerLoginComponent,
-    FirstPageComponent
+    FirstPageComponent,
+    AdminHomeComponent
   ],
   
   imports: [
