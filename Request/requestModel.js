@@ -5,7 +5,7 @@ var requestSchema = new Schema({
 
     RequestID:Number, 
     Uname:String,
-    Uphone:Number,
+    Email:String,
     ReqDate:Date,
     ProductId:Number,
     ProductName:String,

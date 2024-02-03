@@ -37,7 +37,8 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
     ReqpageComponent,
     RescuerLoginComponent,
     FirstPageComponent,
-    AdminHomeComponent
+    NewRescuerComponent,
+    
   ],
   
   imports: [

@@ -37,3 +37,17 @@ exports.AddRequests=async(req,res,next)=>{
         
     }
 }
+
+exports.getLatestRequest = async (req, res, next) => {
+    try {
+      const latestRequest = await Requests.findOne().sort({ RequestID: -1 }).limit(1);
+  
+      return res.status(200).json({
+        success: true,
+        data: latestRequest
+      });
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ error: 'Error' });
+    }
+  }

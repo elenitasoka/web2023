@@ -1,0 +1,204 @@
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-events {
+    width: 300px;
+    height: 200px;
+    overflow: auto;
+    border: 1px solid #555;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  }
+  
+  .user-img{
+    width: 50px;
+    border-radius: 100%;
+    border: 1px solid #000;
+  }
+  
+  .mat-sidenav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color:brown;
+    padding: .4rem .8rem;
+    transition: all 0.5s ease;
+  
+  }
+  
+  .mat-sidenav .active ~ .main-content{
+    left: 250px;
+    width: calc(100%-250px);
+  }
+  
+  .mat-sidenav .active{
+    width: 250px;
+  }
+  
+  .mat-sidenav  #btn{
+    position: absolute;
+    color: #fff;
+    top: .4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+   
+  }
+  
+  .mat-sidenav .active #btn{
+    left: 90%;
+  
+  }
+  
+  .mat-sidenav  .top .logo{
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 1; /*otan einai kleisto to mat-sidenav  den fainetai to logo*/
+  }
+  
+  
+  .top .logo i{
+    font-size: 2rem;
+    margin-right: 5px;
+  }
+  
+  .bx-hard-hat
+  {
+    font-size: 3rem;
+  }
+  .user{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  .user p{
+    color: #fff;
+    opacity: 1;
+    margin-left: 1rem;
+  }
+  
+  .bold{
+    font-weight: 600;
+  }
+  
+  .mat-sidenav .active p{
+    opacity: 1; /*otan einai anoixto to mat-sidenav  fainetai to onoma*/
+  }
+  
+  /* ta dashboard, announcements, offers, requests, logout -> buttons*/
+  .mat-sidenav  ul li{
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    width: 90%;
+    margin: 0.8rem auto;
+    line-height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .mat-sidenav  ul li a{
+    color:#fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+  }
+  
+  .mat-sidenav  ul li a:hover {
+    background-color: #fff;
+    color:#12171e
+  }
+  
+  .mat-sidenav  ul li a i{
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+  }
+  
+  .mat-sidenav  .nav-item{
+    opacity:0;
+  }
+  
+  .mat-sidenav .active .nav-item{
+    opacity:1;
+  }
+  
+  .mat-sidenav  ul li .tooltip{
+    position: absolute;
+    left:125px;
+    top:50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+    border-radius: .6rem;
+    padding: .4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 1;
+  }
+  
+  .mat-sidenav .active ul li .tooltip{
+    display: none;
+  }
+  
+  .main-content{
+    position: relative;
+    background-color: #fff;
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    width: calc(100% -80px);
+    padding: 1rem;
+  }
+  
+  .background-img{
+    width: 55%;
+    height: 80%;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .bxs-wrench{
+    font-size: 2rem;
+  }
+  .bx-menu{
+    font-size: 1.5rem;
+  }
+
+.btn-primary {
+  background-color: brown; 
+  color: #000; 
+  border: none;
+  width: 100px;
+}
+
+.btn-primary:hover {
+  background-color:white; 
+  color:#000; 
+}
+
+  
+  
