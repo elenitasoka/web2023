@@ -1,8 +1,12 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-reqpage',
+  standalone: true,
+  imports:[CommonModule, FormsModule],
   templateUrl: './reqpage.component.html',
   styleUrls: ['./reqpage.component.css']
 })
@@ -15,7 +19,7 @@ export class ReqpageComponent {
   numberOfPeople: number | null=null;
   i: number = 1;
 
-  constructor(private http: HttpClient){
+  constructor(private http: HttpClient, private router: Router){
     //get request from web api
       this.http.get("http://localhost:9992/product").subscribe((resultData: any) => {
        console.log(resultData);
@@ -82,6 +86,8 @@ Search(){
         
       };
       
+  
+
       console.log(this.requestType);
       this.http.post("http://localhost:9992/Request/create", newRequest).subscribe((resultData: any) => {
         console.log(resultData);
@@ -92,5 +98,10 @@ Search(){
       });
     });
   }
+
 }
  
+function backToUserhome() {
+  throw new Error('Function not implemented.');
+}
+

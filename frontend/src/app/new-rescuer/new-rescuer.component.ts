@@ -31,7 +31,7 @@ export class NewRescuerComponent {
       "password": this.password,
       "role":this.userType
     };
-    this.http.post("http://localhost:9992/users/create", bodyData).subscribe((resultData: any)=>
+    this.http.post("http://localhost:9992/rescuer/create", bodyData).subscribe((resultData: any)=>
     {
       console.log(resultData);
       alert("You have created a new rescuer successfully");

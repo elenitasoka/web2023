@@ -148,7 +148,6 @@
   left:125px;
   top:50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
   border-radius: .6rem;
   padding: .4rem 1.2rem;
   line-height: 1.8rem;
@@ -184,6 +183,19 @@
 .bx-menu{
   font-size: 1.5rem;
 }
+.btn-primary {
+  background-color: brown; 
+  color: #000; 
+  border: none;
+  width: 130px;
+  box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+  background-color:white; 
+  color:#000; 
+}
+
 
 
 
