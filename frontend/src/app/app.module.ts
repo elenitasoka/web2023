@@ -23,6 +23,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { FirstPageComponent } from './first-page/first-page.component';
 import { NewRescuerComponent } from './new-rescuer/new-rescuer.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { OffersComponent } from './offers/offers.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
     RescuerLoginComponent,
     FirstPageComponent,
     NewRescuerComponent,
+    OffersComponent
     
   ],
   
