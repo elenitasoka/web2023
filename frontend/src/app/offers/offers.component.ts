@@ -124,7 +124,6 @@ submit(){
     
     
   };
-
   this.http.post("http://localhost:9992/offers/create", newOffer).subscribe((resultData: any) => {
           console.log(resultData);
           alert("Your request has been submitted successfully");
