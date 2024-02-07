@@ -8,7 +8,8 @@ var rescuerSchema = new Schema({
     usename:String,
     email:String,
     password:String,
-    Vname:String
+    Vname:String,
+    address:String
 
 });
 

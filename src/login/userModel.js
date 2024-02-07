@@ -22,6 +22,10 @@ var userSchema = new Schema({
     role: {
         type: String,
         required: true
+    },
+    address:{
+        type: String,
+        required: true
     }
 });
 

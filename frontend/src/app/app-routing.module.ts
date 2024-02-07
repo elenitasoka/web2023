@@ -15,6 +15,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { RescuerMenuComponent } from './rescuer-menu/rescuer-menu.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { NewRescuerComponent } from './new-rescuer/new-rescuer.component';
+import { NewMapComponent } from './new-map/new-map.component';
 
 const routes: Routes = [
   {
@@ -81,7 +82,12 @@ const routes: Routes = [
    {
     path:'newRescuerForm',
     component:NewRescuerComponent
+   },
+   {
+    path:'new-map',
+    component:NewMapComponent
    }
+
 
 
 ];
