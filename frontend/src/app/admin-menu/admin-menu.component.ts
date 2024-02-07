@@ -15,7 +15,12 @@ export class AdminMenuComponent {
   selectedCategoryProducts: any[] = [];
   filteredOffers: any[] = [];
   categoryId=0;
+  selectedProductId: string | null = null;
   selectedCategoryId: string | null = null;
+  selectedName: string | null = null;
+  selectedProduct: any;
+  selectedProductQuantity: number | undefined;
+  formVisible: boolean = false;
   ngOnInit(): void
   {
     this.category();
@@ -57,7 +62,44 @@ export class AdminMenuComponent {
     }
     goBack(): void {
       this.selectedCategoryId = null;
+      this.formVisible = false;
     }
     
-    
+    selectProduct(productId: any,productName:any) {
+      // Υλοποιήστε τη λογική που χρειάζεστε για την επιλογή προϊόντος
+      this.selectedProduct = productId/* Επιλεγμένο προϊόν */;
+      this.selectedName=productName;
+      this.formVisible = true;
+      // Υποθέτουμε ότι έχετε μια μέθοδο onSubmit
+      this.onSubmit();
+    }
+  
+    // Υποθέτουμε ότι έχετε μια μέθοδο onSubmit
+    onSubmit() {
+      // Εδώ μπορείτε να υλοποιήσετε τη λογική που χρειάζεστε για την υποβολή της φόρμας
+      this.formVisible = true;
+    }
+    informdatabase(){
+      console.log("pame ligo");
+      console.log(this.selectedProduct);
+      console.log(this.selectedName);
+      console.log(this.selectedProductQuantity);
+      let bodyData =
+      {
+        "category": this.selectedCategoryId,
+        "name": this.selectedName,
+        "ProductID": this.selectedProduct,
+        "Ammount":this.selectedProductQuantity
+      };
+      this.http.post("http://localhost:9992/database/create", bodyData).subscribe((resultData: any)=>
+      {
+        console.log(resultData);
+        alert("You have added the items succesfully");
+      });
+     
+      this.selectedCategoryId = null;
+      this.selectedName=null;
+      
+
+    }
   }

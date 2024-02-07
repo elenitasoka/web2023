@@ -37,3 +37,17 @@ exports.AddOffers=async(req,res,next)=>{
         
     }
 }
+
+exports.getLatestOffer = async (req, res, next) => {
+    try {
+      const latestOffer = await Offers.findOne().sort({ OfferID: -1 }).limit(1);
+      console.log("ID",latestOffer);
+      return res.status(200).json({
+        success: true,
+        data: latestOffer
+      });
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ error: 'Error' });
+    }
+  }

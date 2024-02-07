@@ -5,8 +5,8 @@ var offersSchema=new Schema({
 
     OfferID: Number,
     Uname:String,
-    Uphone:Number,
-    ReqDate:Date,
+    Email:String,
+    OfferDate:Date,
     ProductId:Number,
     ProductName:String,
     Ammount:Number,

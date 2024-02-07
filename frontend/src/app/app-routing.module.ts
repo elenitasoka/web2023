@@ -15,9 +15,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { RescuerMenuComponent } from './rescuer-menu/rescuer-menu.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { NewRescuerComponent } from './new-rescuer/new-rescuer.component';
-import { TaskMenuComponent } from './task-menu/task-menu.component';
-import { RescuerTasksMenuComponent } from './rescuer-tasks-menu/rescuer-tasks-menu.component';
-import { RescuerVehicleCargoComponent } from './rescuer-vehicle-cargo/rescuer-vehicle-cargo.component';
+import { OffersComponent } from './offers/offers.component';
 
 const routes: Routes = [
   {
@@ -84,22 +82,11 @@ const routes: Routes = [
   {
     path:'newRescuerForm',
     component:NewRescuerComponent
-  },
-  {
-    path:'taskMenu',
-    component:TaskMenuComponent
-  },
-  {
-    path:'rescuerTaskMenu',
-    component:RescuerTasksMenuComponent
-  },
-  {
-    path:'rescuerVehicleCargo',
-    component: RescuerVehicleCargoComponent
+   },
+   {
+   path:"offers",
+   component:OffersComponent
   }
-
-
-
 
 ];
 

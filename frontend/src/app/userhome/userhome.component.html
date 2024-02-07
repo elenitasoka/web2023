@@ -21,8 +21,18 @@
             </div>
             <div class="user">
                 <i class='bx bx-user-circle' ></i>
-                <div>             
+                <div>
+                  
+                    
+
+
+                    <p></p>
+
+
+                    <p>user</p>
+
                     <p>{{loginDataService.filteredUsers[0]?.firstname}}</p>
+
                 </div>
             </div>
             <ul>
@@ -38,12 +48,12 @@
                         <i class='bx bx-basket' ></i>
                         <span class="nav-item">Requests</span>
                     </a>
-                    <!--molis pataei to button gia to reqpage emfanizetai sto idio page-->
-                    <div>
-                        <span class="tooltip">
-                          <button type="button" class="btn btn-primary" (click)="toggleshowReqPage()">Requests</button>
-                        </span>
-                    </div>
+
+                    <span class="tooltip">Requests</span>
+
+                    <span class="tooltip"><button type="button" class="btn btn-primary" [routerLink]="['/reqpage']">Requests</button></span> <!--κουμπι μετάβασης για την σελίδα reqpage-->
+
+                    
                 </li>
 
 

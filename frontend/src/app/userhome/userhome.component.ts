@@ -36,7 +36,7 @@ export class UserhomeComponent {
   ngOnInit() : void{
     setTimeout(() => {
       this.showData();
-    }, 10000);
+    }, 5000); //καθυστερηση 5 δευτερολεπτα μεχρι 
   }
 
   //methodos pou emfanizei ta proionta tou reqpage sto idio page
