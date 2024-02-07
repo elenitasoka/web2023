@@ -25,6 +25,12 @@ import { NewRescuerComponent } from './new-rescuer/new-rescuer.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { NewMapComponent } from './new-map/new-map.component';
 import { OffersComponent } from './offers/offers.component';
+import { RescuerTasksMenuComponent } from './rescuer-tasks-menu/rescuer-tasks-menu.component';
+import { RescuerMenuComponent } from './rescuer-menu/rescuer-menu.component';
+import { RescuerVehicleCargoComponent } from './rescuer-vehicle-cargo/rescuer-vehicle-cargo.component';
+import { AdminComponent } from './admin/admin.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { TaskMenuComponent } from './task-menu/task-menu.component';
 
 
 @NgModule({
@@ -35,7 +41,6 @@ import { OffersComponent } from './offers/offers.component';
     HomeComponent,
     MapComponent,
     RequestpageComponent,
-    //ReqpageComponent,
     RescuerLoginComponent,
     FirstPageComponent,
     NewRescuerComponent,
