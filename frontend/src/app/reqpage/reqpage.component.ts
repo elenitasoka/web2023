@@ -5,7 +5,6 @@
   @Component({
     selector: 'app-reqpage',
     templateUrl: './reqpage.component.html',
-
     styleUrls: ['./reqpage.component.css']
   })
   export class ReqpageComponent {
@@ -15,23 +14,24 @@
     listOfProducts:any ;
     requestType: string = '';
     numberOfPeople: number | null=null;
-    i: number = 1;
+    //i: number = 1;
     Fname:any;
     email:any;
 
     constructor(private http: HttpClient,public loginDataService: loginData){
       //get request from web api
-      
       const firstUser = loginDataService.filteredUsers[0] || {};
+      this.Fname = firstUser.firstname;
+      this.email=firstUser.email;
         this.http.get("http://localhost:9992/product").subscribe((resultData: any) => {
         console.log(resultData);
         this.listOfProducts = resultData.data.map((item: any) => ({
           id: item.id,
           name: item.name,
         }));
-        this.Fname = firstUser.firstname;
-        this.email=firstUser.email;
+        
       });
+      
   } 
 
   Search(){
@@ -90,13 +90,15 @@
           
         };
         
-        console.log(this.requestType);
+        
         this.http.post("http://localhost:9992/Request/create", newRequest).subscribe((resultData: any) => {
           console.log(resultData);
           alert("Your request has been submitted successfully");
     
-          this.requestType = '';
+          this.searchText = '';
           this.numberOfPeople = 0;
+          this.Search();
+          
         });
       });
     }

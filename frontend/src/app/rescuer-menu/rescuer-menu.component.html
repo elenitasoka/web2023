@@ -22,45 +22,45 @@
             <div class="rescuer">
                 <i class='bx bx-hard-hat'></i>
                 <div>
-                    <p class="bold"> RescuerFullname</p>
-                    <p>Rescuer</p>
+                    <p>{{loginDataService.filteredUsers[0]?.usename}}</p>
+
                 </div>
             </div>
             <ul>
-                <li>
-                    <a href="#">
-                        <i class="bx bxs-grid-alt"></i>
-                        <span class="nav-item">Dashboard</span>
-                    </a>
-                    <span class="tooltip">Dashboard</span>
-                </li>
+             
                 <li>
                     <a href="#">
                         <i class='bx bxs-map-pin' ></i>
                         <span class="nav-item">Maps</span>
                     </a>
-                    <span class="tooltip">Maps</span>
+                    <span class="tooltip"><button type="button" class="btn btn-primary" [routerLink]="['/']">Maps</button></span>
                 </li>
                 <li>
                     <a href="#">
                         <i class='bx bx-task' ></i>
                         <span class="nav-item">Tasks</span>
                     </a>
-                    <span class="tooltip">Tasks</span>
-                </li>
+                    <div>
+                        <span class="tooltip">
+                          <button type="button" class="btn btn-primary" (click)="toggleshowTaskPage()">Tasks</button>
+                        </span>
+                    </div>              
                 <li>
                     <a href="#">
                         <i class='bx bxs-bus' ></i>
                         <span class="nav-item">Vehicle Cargo</span>
                     </a>
-                    <span class="tooltip">Vehicle Cargo</span>
-                </li>
+                    <div>
+                        <span class="tooltip">
+                          <button type="button" class="btn btn-primary" (click)="toggleVehiclePage()">Vehicle Cargo</button>
+                        </span>
+                    </div>  
                 <li>
                     <a href="#">
                         <i class="bx bx-log-out"></i>
                         <span class="nav-item">Logout</span>
                     </a>
-                    <span class="tooltip">Logout</span>
+                    <span class="tooltip"><button type="button" class="btn btn-primary" [routerLink]="['/']">Logout</button></span>               
                 </li>
             </ul>
 
@@ -72,6 +72,10 @@
     <mat-sidenav-content>
         <!-- Κουμπί για να ανοίγει/κλείνει το sidebar -->
         <p><button mat-button (click)="sidenav.toggle()"><i class="bx bx-menu" id="btn"></i></button></p>
+ 
+        <!--gia na emfanistei to taskpage panw apo tin eikona sto idio page-->
+        <div *ngIf="showTaskPage"><app-rescuer-tasks-menu></app-rescuer-tasks-menu></div>
+        <div *ngIf="showVehicleCargo"><app-rescuer-vehicle-cargo></app-rescuer-vehicle-cargo></div>
 
         <div class="main-content">
             <div class="container">

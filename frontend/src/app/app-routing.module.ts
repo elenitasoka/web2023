@@ -16,6 +16,7 @@ import { RescuerMenuComponent } from './rescuer-menu/rescuer-menu.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { NewRescuerComponent } from './new-rescuer/new-rescuer.component';
 import { NewMapComponent } from './new-map/new-map.component';
+import { OffersComponent } from './offers/offers.component';
 
 const routes: Routes = [
   {
@@ -62,32 +63,35 @@ const routes: Routes = [
     component:AdminComponent
    },
 
- {
+  {
     path:'rescuer-login',
     component:RescuerLoginComponent
-   },
+  },
 
-   {
+  {
     path:'sidenav',
     component:SidenavComponent
-   },
-   {
+  },
+  {
     path:'rescuerMenu',
     component:RescuerMenuComponent
-   },
-   {
+  },
+  {
     path:'adminHome',
     component:AdminHomeComponent
-   },
-   {
+  },
+  {
     path:'newRescuerForm',
     component:NewRescuerComponent
    },
    {
     path:'new-map',
     component:NewMapComponent
-   }
-
+   },
+  {
+   path:"offers",
+   component:OffersComponent
+  }
 
 
 ];

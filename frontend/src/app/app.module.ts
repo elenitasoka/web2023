@@ -24,6 +24,7 @@ import { FirstPageComponent } from './first-page/first-page.component';
 import { NewRescuerComponent } from './new-rescuer/new-rescuer.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { NewMapComponent } from './new-map/new-map.component';
+import { OffersComponent } from './offers/offers.component';
 
 
 @NgModule({
@@ -34,10 +35,11 @@ import { NewMapComponent } from './new-map/new-map.component';
     HomeComponent,
     MapComponent,
     RequestpageComponent,
-    ReqpageComponent,
+    //ReqpageComponent,
     RescuerLoginComponent,
     FirstPageComponent,
     NewRescuerComponent,
+    OffersComponent
     
   ],
   

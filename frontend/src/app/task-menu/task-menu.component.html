@@ -1,0 +1,54 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+   
+  <title>Tasks Page</title>
+</head>
+
+<div class="container text-center mt-4">
+  <table class="table table-striped table-bordered table-sm" *ngIf="!selectedTaskId">
+    <thead>
+      <tr>
+        <th>Tasks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks; let i = index" (click)="selectTask(task.id)">
+        <td>{{ i + 1 }}. Task {{ task.id }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="selectedTaskId">
+    <table class="table table-striped table-bordered table-sm">
+      <thead>
+        <tr>
+          <th>User Name</th>
+          <th>Request/Offer Date</th>
+          <th>Product ID</th>
+          <th>Product Name</th>
+          <th>Ammount</th>
+          <th>Pickup Date</th>
+          <th>Status</th>
+          <th>Vehicle Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tasks of filteredOffers; let i = index">
+          <td>{{ tasks.Uname }}</td>
+          <td>{{ tasks.ReqDate }}</td>
+          <td>{{ tasks.ProductId }}</td>
+          <td>{{ tasks.ProductName }}</td>
+          <td>{{ tasks.Ammount }}</td>
+          <td>{{ tasks.PickupaDate }}</td>
+          <td>{{ tasks.Status }}</td>
+          <td>{{ tasks.Vname }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button (click)="goBack()">Back to Tasks</button>
+  </div>
+</div>

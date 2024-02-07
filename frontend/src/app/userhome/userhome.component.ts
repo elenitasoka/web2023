@@ -13,20 +13,25 @@ import { RouterModule } from '@angular/router';
 import { AdminMenuComponent } from '../admin-menu/admin-menu.component';
 
 
+import { ReqpageComponent } from '../reqpage/reqpage.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-userhome',
   standalone: true,
-  imports: [AdminMenuComponent,ListViewModule,SidebarModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,MatSidenavModule,FormsModule,ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule,RouterModule],
+ 
+  imports: [CommonModule, ReqpageComponent, ListViewModule,SidebarModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,MatSidenavModule,FormsModule,ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule,RouterModule],
   templateUrl: './userhome.component.html',
 
   styleUrls: ['./userhome.component.css']
 })
 export class UserhomeComponent {
   constructor(public loginDataService: loginData) {}
+
   events: string[] = [];
   opened!: boolean;  
   showRequestsAndOffers: boolean = false;
+  showReqPage: boolean = false;
   
   showData(){ //sunarthsh gia na emfanisei ta stoixeia tou xrhsth sto console
     console.log("edwpera:",this.loginDataService.filteredUsers);
@@ -39,7 +44,11 @@ export class UserhomeComponent {
     }, 5000); //καθυστερηση 5 δευτερολεπτα μεχρι 
   }
 
+  //methodos pou emfanizei ta proionta tou reqpage sto idio page
+  toggleshowReqPage() {
+    this.showReqPage = !this.showReqPage;
+  }
 
-  
+ 
 }
 

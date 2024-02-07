@@ -32,8 +32,11 @@ export class AdminMenuComponent {
 
   category()
   {
+    //aitima http get pros to sugkekrimeno url
     this.http.get("http://localhost:9992/category").subscribe((resultData: any) => {
-     console.log(resultData);
+    //ektupwsi twn dedomenwn pou epesrepse o server
+    console.log(resultData);
+    //epexergasia twn dedomenwn gia th dhmiourgia neou pinaka categories
      this.categories = resultData.data.map((item: any) => ({
       id: item.id,
       category: item.category
@@ -45,13 +48,16 @@ export class AdminMenuComponent {
   }
    async getProductsByCategory(categoryId: string): Promise<void> {
     console.log(categoryId);
+
+    //apostoli aitimatos http gia tin anaktisi twn proiontwn apo ton server
     const offersResponse = await fetch(`http://localhost:9992/product`);
+    //anamoni gia thn apokrish kai metatropi tous se json
     const offersData = await offersResponse.json();
      
       console.log(offersData);
       
-         
-       this.filteredOffers = offersData.data.filter((offer: any) => offer.category === categoryId);
+      //filtrarisma twn proiontwn basi ths epilegmenhs kathgorias
+      this.filteredOffers = offersData.data.filter((offer: any) => offer.category === categoryId);
       this.selectedCategoryId = categoryId;
       console.log("Selected Category ID:", this.selectedCategoryId);
 

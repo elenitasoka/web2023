@@ -13,10 +13,11 @@
 <table class="table table-striped table-bordered table-sm" *ngIf="!selectedCategoryId">
   <thead>
     <tr>
-      <th>Category</th>
+      <th>Categories</th>
     </tr>
   </thead>
   <tbody>
+    <!--gemisma tou pianaka category-->
     <tr *ngFor="let category of categories; let i = index" (click)="getProductsByCategory(category.id)">
       <td>{{ i + 1 }}. {{ category.category }}</td>
     </tr>
@@ -27,7 +28,7 @@
 
 <div *ngIf="selectedCategoryId && !selectedProductId">
   <button (click)="goBack()">Back to Categories</button>
-  <table class="table table-dark table-hover">
+  <table class="table table-striped table-bordered table-sm">
     <thead>
       <tr>
         <th>ID</th>

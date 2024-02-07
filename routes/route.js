@@ -30,6 +30,7 @@ router.route('/markets/create').post(marketController.AddMarkets);
 
 router.route('/offers').get(offersController.getOffers);
 router.route('/offers/create').post(offersController.AddOffers);
+router.route('/offers/latest').get(offersController.getLatestOffer);
 
 
 router.route('/product').get(productController.getProduct);
