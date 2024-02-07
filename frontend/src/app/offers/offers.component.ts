@@ -22,7 +22,8 @@ disable: any[] = [];
 
 constructor(private http: HttpClient,public loginDataService: loginData){
   const firstUser = loginDataService.filteredUsers[0] || {};
-
+  this.Fname = firstUser.firstname;
+  this.email=firstUser.email;
 
   this.http.get("http://localhost:9992/announcement").subscribe((resultData: any) => {
         console.log(resultData);
@@ -30,8 +31,7 @@ constructor(private http: HttpClient,public loginDataService: loginData){
           ProductID: item.ProductID,
           ProductName: item.ProductName,
         }));
-      this.Fname = firstUser.firstname;
-      this.email=firstUser.email;
+      
         
 })
 
@@ -109,13 +109,14 @@ submit(){
 
 
   const selectedGroup = this.AnnouncementList.find((group:any) => group.ProductName === this.searchText); //επιλογή αντικειμένου που έχουν το όνομα του searchText
+  console.log("erere",selectedGroup.ProductName);
   const newOffer = {
     OfferID: latestOfferId + 1,
     Uname:this.Fname,
     Email:this.email,
     OfferDate: new Date(),
-    ProductId:selectedGroup.id,
-    ProductName:selectedGroup.name,
+    ProductId:selectedGroup.ProductID,
+    ProductName:selectedGroup.ProductName,
     Ammount:this.offerQuantity,
     PickupDate: '', 
     Status: false, 

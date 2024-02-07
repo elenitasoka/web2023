@@ -21,15 +21,15 @@
     constructor(private http: HttpClient,public loginDataService: loginData){
       //get request from web api
       const firstUser = loginDataService.filteredUsers[0] || {};
-      
+      this.Fname = firstUser.firstname;
+      this.email=firstUser.email;
         this.http.get("http://localhost:9992/product").subscribe((resultData: any) => {
         console.log(resultData);
         this.listOfProducts = resultData.data.map((item: any) => ({
           id: item.id,
           name: item.name,
         }));
-        this.Fname = firstUser.firstname;
-      this.email=firstUser.email;
+        
       });
       
   } 
