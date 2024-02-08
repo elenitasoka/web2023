@@ -10,6 +10,9 @@ import { ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipList
 import { ListViewModule } from '@syncfusion/ej2-angular-lists';
 import { loginData } from '../login/loginData.component';
 import { RouterModule } from '@angular/router';
+import { AdminMenuComponent } from '../admin-menu/admin-menu.component';
+
+
 import { ReqpageComponent } from '../reqpage/reqpage.component';
 import { CommonModule } from '@angular/common';
 import { OffersComponent } from '../offers/offers.component';
@@ -17,8 +20,10 @@ import { OffersComponent } from '../offers/offers.component';
 @Component({
   selector: 'app-userhome',
   standalone: true,
-  imports: [OffersComponent, CommonModule, ReqpageComponent, ListViewModule,SidebarModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,MatSidenavModule,FormsModule,ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule,RouterModule],
+ 
+  imports: [CommonModule, ReqpageComponent, ListViewModule,SidebarModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,MatSidenavModule,FormsModule,ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule,RouterModule],
   templateUrl: './userhome.component.html',
+
   styleUrls: ['./userhome.component.css']
 })
 export class UserhomeComponent {

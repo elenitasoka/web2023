@@ -15,6 +15,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { RescuerMenuComponent } from './rescuer-menu/rescuer-menu.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { NewRescuerComponent } from './new-rescuer/new-rescuer.component';
+import { NewMapComponent } from './new-map/new-map.component';
 import { OffersComponent } from './offers/offers.component';
 import { RescuerTasksMenuComponent } from './rescuer-tasks-menu/rescuer-tasks-menu.component';
 import { RescuerVehicleCargoComponent } from './rescuer-vehicle-cargo/rescuer-vehicle-cargo.component';
@@ -88,6 +89,10 @@ const routes: Routes = [
     component:NewRescuerComponent
    },
    {
+    path:'new-map',
+    component:NewMapComponent
+   },
+  {
    path:"offers",
    component:OffersComponent
   },
@@ -107,6 +112,7 @@ const routes: Routes = [
     path:"Databasecategories",
     component:DatabasecategoriesComponent
    },
+
 
 
 ];
