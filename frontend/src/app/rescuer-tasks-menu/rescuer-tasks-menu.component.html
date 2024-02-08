@@ -12,12 +12,12 @@
   <table class="table table-striped table-bordered table-sm" *ngIf="!selectedTaskId">
     <thead>
       <tr>
-        <th>Rescuer Tasks</th>
+        <th>{{loginDataService.filteredUsers[0]?.usename}} Tasks</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let task of filteredTasks; let i = index" (click)="selectTask(task.id)">
-        <td>{{ i + 1 }}. Task {{ task.id }}</td>
+      <tr *ngFor="let task of filteredTasks; let i = index" (click)="selectTask(task.taskID)">
+        <td>{{ i + 1 }}. Task {{ task.taskID }}</td>
       </tr>
     </tbody>
   </table>

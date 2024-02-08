@@ -23,12 +23,7 @@
                 <i class='bx bx-user-circle' ></i>
                 <div>
                   
-                    
-
-
                     <p></p>
-
-
                     <p>user</p>
 
                     <p>{{loginDataService.filteredUsers[0]?.firstname}}</p>
@@ -36,6 +31,18 @@
                 </div>
             </div>
             <ul>
+                
+                <li>
+                    <a href="#">
+                        <i class='bx bx-check-shield'></i>
+                        <span class="nav-item">Personal Activity</span>
+                    </a>
+                    <div>
+                        <span class="tooltip">
+                          <button type="button" class="btn btn-primary" (click)="toggleshowRequestsAndOffers()">Personal Activity</button>
+                        </span>
+                    </div> 
+                </li>
                 <li>
                     <a href="#">
                         <i class='bx bx-map'></i>
@@ -51,25 +58,25 @@
 
                     <span class="tooltip">Requests</span>
 
-                    <span class="tooltip"><button type="button" class="btn btn-primary" [routerLink]="['/reqpage']">Requests</button></span> <!--κουμπι μετάβασης για την σελίδα reqpage-->
-
+                    <div>
+                        <span class="tooltip">
+                          <button type="button" class="btn btn-primary" (click)="toggleshowReqPage()">Requests</button>
+                        </span>
+                    </div> 
                     
                 </li>
 
-
-                <li>
-                    <a href="#">
-                        <i class='bx bxs-bell'></i>
-                        <span class="nav-item">Announcements</span>
-                    </a>
-                    <span class="tooltip"><button type="button" class="btn btn-primary" [routerLink]="['/']">Announcements</button></span>
-                </li>
                 <li>
                     <a href="#">
                         <i class='bx bxs-donate-heart'></i>
                         <span class="nav-item">Offers</span>
                     </a>
-                    <span class="tooltip"><button type="button" class="btn btn-primary" [routerLink]="['/']">Offers</button></span>                </li>
+                    <div>
+                        <span class="tooltip">
+                          <button type="button" class="btn btn-primary" (click)="toggleshowOffersPage()">Offers</button>
+                        </span>
+                    </div>            
+                </li>
                 <li>
                     <a href="#">
                         <i class="bx bx-log-out"></i>
@@ -87,7 +94,10 @@
 
         <!--gia na emfanistei to reqpage panw apo tin eikona sto idio page-->
         <div *ngIf="showReqPage"><app-reqpage></app-reqpage></div>
+        <div *ngIf="showRequestsAndOffers"><app-reqpage></app-reqpage></div>
+        <div *ngIf="showOffersPage"><app-offers></app-offers></div>
 
+        
         <div class="main-content">
             <div class="container">
                 <h1>Rescue Zone</h1>

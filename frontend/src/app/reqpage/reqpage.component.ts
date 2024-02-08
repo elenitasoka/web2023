@@ -1,9 +1,15 @@
   import { Component } from '@angular/core';
   import { HttpClient } from '@angular/common/http';
   import { loginData } from '../login/loginData.component';
+  import { CommonModule } from '@angular/common';
+  import { FormsModule } from '@angular/forms';
+  
+  
 
   @Component({
     selector: 'app-reqpage',
+    standalone:true,
+    imports:[CommonModule,FormsModule],    
     templateUrl: './reqpage.component.html',
     styleUrls: ['./reqpage.component.css']
   })
@@ -17,6 +23,10 @@
     //i: number = 1;
     Fname:any;
     email:any;
+
+    showData(){ //sunarthsh gia na emfanisei ta stoixeia tou xrhsth sto console
+      console.log("user data:",this.loginDataService.filteredUsers);
+    } 
 
     constructor(private http: HttpClient,public loginDataService: loginData){
       //get request from web api

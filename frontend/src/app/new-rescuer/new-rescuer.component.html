@@ -13,6 +13,11 @@
                 <h1>New Rescuer</h1>
                 <form>
                     <div class="form-group">
+                        <input type="text" [(ngModel)]="rescuerID" [ngModelOptions]="{standalone: true}" class="form-control" id="rescuerIdInput" placeholder="ID" required>
+                        <i class='bx bx-key'></i>
+                    </div>
+                    
+                    <div class="form-group">
                         <input type="text" [(ngModel)]="firstname" [ngModelOptions]="{standalone: true}" class="form-control" id="stname" placeholder="Name" required>
                         <i class='bx bxs-user-plus' ></i>
                     </div>
@@ -27,6 +32,10 @@
                     <div class="form-group">
                         <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="form-control" id="fee" placeholder="Password" required>
                         <i class='bx bxs-lock-alt' ></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="address" [ngModelOptions]="{standalone: true}" class="form-control" id="stname" placeholder="Address" required>
+                        <i class='bx bxs-directions' ></i>
                     </div>
                     <button type="submit" class="btn-primary mt-4" (click)="save()"> Save </button>
                     <div class="home-link">

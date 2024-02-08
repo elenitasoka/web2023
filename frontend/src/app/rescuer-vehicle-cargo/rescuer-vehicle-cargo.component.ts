@@ -13,6 +13,11 @@ import { loginData } from '../rescuer-login/rescuerloginData.component';
 })
 export class RescuerVehicleCargoComponent {
 
+
+  showData(){ //sunarthsh gia na emfanisei ta stoixeia tou rescuer sto console
+    console.log("user data:",this.loginDataService.filteredUsers);
+  }
+
   constructor(private http: HttpClient, public loginDataService: loginData) {}
   public tasks: any[]= [];
   selectedVehicleName: string | null = null;
