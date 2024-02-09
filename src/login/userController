@@ -15,8 +15,8 @@ var createUserControllerFn=async(req, res) =>
         }else{
             res.send({"status":false, "message":"Error creating user"});
         }
-    } catch(err){
-        console.log(err);
+    } catch(error){
+        console.log(error);
     }
 }
 
