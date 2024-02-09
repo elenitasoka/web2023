@@ -1,11 +1,15 @@
   import { Component } from '@angular/core';
   import { HttpClient } from '@angular/common/http';
   import { loginData } from '../login/loginData.component';
+  import { CommonModule } from '@angular/common';
+  import { FormsModule } from '@angular/forms';
 
   @Component({
     selector: 'app-reqpage',
     templateUrl: './reqpage.component.html',
-    styleUrls: ['./reqpage.component.css']
+    styleUrls: ['./reqpage.component.css'],
+    standalone:true,
+    imports:[CommonModule,FormsModule],
   })
   export class ReqpageComponent {
     title = 'angular13';
@@ -82,8 +86,8 @@
           Email: this.email, // 
           ReqDate: new Date(), // Σημερινή ημερωμηνία
           ProductId: selectedGroup.id, //χρήση του id με βάση το name που αναζητησε ο χρήστης
-          "ProductName": this.searchText, // Χρησιμοποιούμε την τιμή από την αναζήτηση
-          "Ammount": this.numberOfPeople, // Χρησιμοποιούμε την τιμή από το numberOfPeople
+          ProductName: this.searchText, // Χρησιμοποιούμε την τιμή από την αναζήτηση
+          Ammount: this.numberOfPeople, // Χρησιμοποιούμε την τιμή από το numberOfPeople
           PickupDate: '', 
           Status: false, 
           Vname: '' 

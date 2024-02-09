@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     
+    <title>Personal Activity</title>
+    <style>
+      .true-cell {
+          background-color: #c8e6c9; /* Light green */
+      }
+      .false-cell {
+          background-color: #ffcdd2; /* Light red */
+      }
+  </style>
+</head>
+<body>
+    <div class="container text-center mt-4">
+        <div class="row d-flex">
+            <!-- Πεδίο αναζήτησης 
+            <div class="col-md-4 offset-md-4">
+                <input class="form-control mt-2 mb-2" type="text" [(ngModel)]="searchText" (input)="Search()" placeholder="Search by product" required />
+            </div>
+             Πεδίο "Number of People" και κουμπί "Submit Request" -->
+            
+        </div>
+        
+
+        <h2>Offers</h2>
+        <table class="table table-white table-hover" id="datatableexample">
+          <thead>
+            <tr>
+              <th>ProductName</th>
+              <th>Ammount</th>
+              <th>OfferDate</th>
+              <th>PickupDate</th>
+              <th>Status</th>
+               <th>Actions</th>
+            
+              </tr>
+          </thead>
+          <tbody>
+              
+                  <tr *ngFor="let group of FilteredOffers" >
+                      <td>{{group.ProductName}}</td>
+                      <td>{{group.Ammount}}</td>
+                      <td>{{group.OfferDate}}</td>
+                      <td>{{group.PickupDate}}</td>
+                      <td [ngClass]="{'true-cell': group.Status === true, 'false-cell': group.Status === false}">{{group.Status}}</td>                      <td>
+                        <button *ngIf="group.Status === false" class="btn btn-danger" (click)="cancel(group.ID)">Cancel</button>
+                    </td>
+                   </tr>
+                   
+          </tbody>
+        </table>
+
+        <h2>Requests</h2>
+        <table class="table table-white table-hover" id="datatableexample">
+            <thead>
+              <tr>
+                <th>ProductName</th>
+                <th>Ammount</th>
+                <th>ReqDate</th>
+                <th>Status</th>
+                <th>PickupDate</th>
+                
+               
+                </tr>
+            </thead>
+            <tbody>
+                
+                    <tr *ngFor="let group of FilteredRequests" >
+                        <td>{{group.ProductName}}</td>
+                        <td>{{group.Ammount}}</td>
+                        <td>{{group.ReqDate}}</td>
+                        <td [ngClass]="{'true-cell': group.Status === true, 'false-cell': group.Status === false}">{{group.Status}}</td>
+                        <td>{{group.PickupDate}}</td>
+                       
+                        
+                     </tr>
+                     
+            </tbody>
+          </table>
+        </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+   
+</body>
+</html>

@@ -24,6 +24,12 @@ import { FirstPageComponent } from './first-page/first-page.component';
 import { NewRescuerComponent } from './new-rescuer/new-rescuer.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { OffersComponent } from './offers/offers.component';
+import { RescuerTasksMenuComponent } from './rescuer-tasks-menu/rescuer-tasks-menu.component';
+import { RescuerVehicleCargoComponent } from './rescuer-vehicle-cargo/rescuer-vehicle-cargo.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { ActivitiesComponent } from './activities/activities.component';
+import { ChartsComponent } from './charts/charts.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -39,7 +45,10 @@ import { OffersComponent } from './offers/offers.component';
     RescuerLoginComponent,
     FirstPageComponent,
     NewRescuerComponent,
-    OffersComponent
+    OffersComponent,
+    
+    
+
     
   ],
   
@@ -53,7 +62,8 @@ import { OffersComponent } from './offers/offers.component';
     MatIconModule,
     MatListModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     provideAnimationsAsync()

@@ -16,6 +16,11 @@ import { RescuerMenuComponent } from './rescuer-menu/rescuer-menu.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { NewRescuerComponent } from './new-rescuer/new-rescuer.component';
 import { OffersComponent } from './offers/offers.component';
+import { RescuerTasksMenuComponent } from './rescuer-tasks-menu/rescuer-tasks-menu.component';
+import { RescuerVehicleCargoComponent } from './rescuer-vehicle-cargo/rescuer-vehicle-cargo.component';
+import { TaskMenuComponent } from './task-menu/task-menu.component';
+import { ActivitiesComponent } from './activities/activities.component';
+import { ChartsComponent } from './charts/charts.component';
 
 const routes: Routes = [
   {
@@ -86,6 +91,32 @@ const routes: Routes = [
    {
    path:"offers",
    component:OffersComponent
+  },
+
+  {
+    path:"rescuerTaskMenu",
+    component:OffersComponent
+   },
+   {
+    path:"rescuerVehicleCargo",
+    component:RescuerVehicleCargoComponent
+   },
+   {
+    path:"rescuerTasksMenu",
+    component:RescuerTasksMenuComponent
+   },
+   {
+    path:"tasksMenu",
+    component:TaskMenuComponent
+   }, 
+
+   {
+     path:'activities',
+     component: ActivitiesComponent
+   },
+   {
+   path:'chart',
+    component:ChartsComponent
   }
 
 ];
