@@ -39,16 +39,9 @@
                     </a>
                     <div>
                         <span class="tooltip">
-                          <button type="button" class="btn btn-primary" (click)="toggleshowRequestsAndOffers()">Personal Activity</button>
+                          <button type="button" class="btn btn-primary" (click)="toggleshowActivitiesPage()">Personal Activity</button>
                         </span>
                     </div> 
-                </li>
-                <li>
-                    <a href="#">
-                        <i class='bx bx-map'></i>
-                        <span class="nav-item">Maps</span>
-                    </a>
-                    <span class="tooltip"><button type="button" class="btn btn-primary" [routerLink]="['/']">Maps</button></span>
                 </li>
                 <li>
                 
@@ -97,6 +90,7 @@
         <div *ngIf="showReqPage"><app-reqpage></app-reqpage></div>
         <div *ngIf="showRequestsAndOffers"><app-reqpage></app-reqpage></div>
         <div *ngIf="showOffersPage"><app-offers></app-offers></div>
+        <div *ngIf="showActivitiesPage"><app-activities></app-activities></div>
         
         <div class="main-content">
             <div class="container">

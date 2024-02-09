@@ -14,12 +14,13 @@ import { AdminMenuComponent } from '../admin-menu/admin-menu.component';
 import { ReqpageComponent } from '../reqpage/reqpage.component';
 import { CommonModule } from '@angular/common';
 import { OffersComponent } from '../offers/offers.component';
+import { ActivitiesComponent } from '../activities/activities.component';
 
 @Component({
   selector: 'app-userhome',
   standalone: true,
  
-  imports: [OffersComponent, CommonModule, ReqpageComponent, ListViewModule,SidebarModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,MatSidenavModule,FormsModule,ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule,RouterModule],
+  imports: [ActivitiesComponent, OffersComponent, CommonModule, ReqpageComponent, ListViewModule,SidebarModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,MatSidenavModule,FormsModule,ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule,RouterModule],
   templateUrl: './userhome.component.html',
 
   styleUrls: ['./userhome.component.css']
@@ -32,6 +33,7 @@ export class UserhomeComponent {
   showRequestsAndOffers: boolean = false;
   showReqPage: boolean = false;
   showOffersPage: boolean = false;
+  showActivitiesPage: boolean = false;
   
   showData(){ //sunarthsh gia na emfanisei ta stoixeia tou xrhsth sto console
     console.log("user data:",this.loginDataService.filteredUsers);
@@ -57,7 +59,10 @@ export class UserhomeComponent {
     this.showOffersPage =!this.showOffersPage;
   }
   
-
+  toggleshowActivitiesPage(){
+    this.showActivitiesPage =!this.showActivitiesPage;
+  }
+  
 
  
 }
