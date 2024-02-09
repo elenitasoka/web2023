@@ -1,11 +1,14 @@
-
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { loginData } from '../login/loginData.component';
 import { waitForAsync } from '@angular/core/testing';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-offers', 
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   templateUrl: './offers.component.html',
   styleUrl: './offers.component.css'
 })
@@ -19,6 +22,9 @@ Fname:any;
 email:any;
 disable: any[] = [];
 
+showData(){ //sunarthsh gia na emfanisei ta stoixeia tou xrhsth sto console
+  console.log("user data:",this.loginDataService.filteredUsers);
+}
 
 constructor(private http: HttpClient,public loginDataService: loginData){
   const firstUser = loginDataService.filteredUsers[0] || {};

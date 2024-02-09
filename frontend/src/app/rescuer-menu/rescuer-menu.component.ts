@@ -41,8 +41,8 @@ export class RescuerMenuComponent {
     }, 10000);
   }
 
-    //methodos pou emfanizei ta proionta tou taskpage sto idio page
-    toggleshowTaskPage() {
+  //gia na emfanizontai ta diaforetika components sto idio page
+  toggleshowTaskPage() {
       this.showTaskPage = !this.showTaskPage;
     }
 

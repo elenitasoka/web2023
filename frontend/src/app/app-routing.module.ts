@@ -15,12 +15,16 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { RescuerMenuComponent } from './rescuer-menu/rescuer-menu.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { NewRescuerComponent } from './new-rescuer/new-rescuer.component';
+import { NewMapComponent } from './new-map/new-map.component';
 import { OffersComponent } from './offers/offers.component';
 import { RescuerTasksMenuComponent } from './rescuer-tasks-menu/rescuer-tasks-menu.component';
 import { RescuerVehicleCargoComponent } from './rescuer-vehicle-cargo/rescuer-vehicle-cargo.component';
 import { TaskMenuComponent } from './task-menu/task-menu.component';
 import { ActivitiesComponent } from './activities/activities.component';
 import { ChartsComponent } from './charts/charts.component';
+import { DatabasecategoriesComponent } from './databasecategories/databasecategories.component';
+import { AnnouncementsComponent } from './announcements/announcements.component';
+import { InventoryComponent } from './inventory/inventory.component';
 
 const routes: Routes = [
   {
@@ -89,6 +93,10 @@ const routes: Routes = [
     component:NewRescuerComponent
    },
    {
+    path:'new-map',
+    component:NewMapComponent
+   },
+  {
    path:"offers",
    component:OffersComponent
   },
@@ -96,6 +104,9 @@ const routes: Routes = [
   {
     path:"rescuerTaskMenu",
     component:OffersComponent
+  {
+    path:"rescuerTaskMenu",
+    component:RescuerTasksMenuComponent
    },
    {
     path:"rescuerVehicleCargo",
@@ -117,7 +128,21 @@ const routes: Routes = [
    {
    path:'chart',
     component:ChartsComponent
+   },
+   {
+    path:"Databasecategories",
+    component:DatabasecategoriesComponent
+   },
+   {
+    path:"announcements",
+    component:AnnouncementsComponent
+   },
+   {path:"inventory",
+   component:InventoryComponent
   }
+
+
+
 
 ];
 

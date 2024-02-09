@@ -6,6 +6,8 @@
 
   @Component({
     selector: 'app-reqpage',
+    standalone:true,
+    imports:[CommonModule,FormsModule],
     templateUrl: './reqpage.component.html',
     styleUrls: ['./reqpage.component.css'],
     standalone:true,
@@ -21,6 +23,10 @@
     //i: number = 1;
     Fname:any;
     email:any;
+
+    showData(){ //sunarthsh gia na emfanisei ta stoixeia tou xrhsth sto console
+      console.log("user data:",this.loginDataService.filteredUsers);
+    } 
 
     constructor(private http: HttpClient,public loginDataService: loginData){
       //get request from web api

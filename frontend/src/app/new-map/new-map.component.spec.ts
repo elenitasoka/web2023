@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TaskMenuComponent } from './task-menu.component';
+import { NewMapComponent } from './new-map.component';
 
-describe('TaskMenuComponent', () => {
-  let component: TaskMenuComponent;
-  let fixture: ComponentFixture<TaskMenuComponent>;
+describe('NewMapComponent', () => {
+  let component: NewMapComponent;
+  let fixture: ComponentFixture<NewMapComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TaskMenuComponent]
+      imports: [NewMapComponent]
     })
     .compileComponents();
-
-    fixture = TestBed.createComponent(TaskMenuComponent);
+    
+    fixture = TestBed.createComponent(NewMapComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

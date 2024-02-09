@@ -22,17 +22,42 @@
             <div class="rescuer">
                 <i class='bx bxs-wrench'></i>
                 <div>
-                    <p class="bold">AdministratorFullname</p>
-                    <p>Admin</p>
+                    <p class="bold">Administrator</p>
                 </div>
             </div>
             <ul>
                 <li>
                     <a href="#">
-                        <i class="bx bx-log-out"></i>
+                        <i class='bx bxs-data'></i>
                         <span class="nav-item">Database</span>
                     </a>
-                    <span class="tooltip"><button type="button" class="btn btn-primary" [routerLink]="['/']">Database</button></span>
+                    <div>
+                        <span class="tooltip">
+                          <button type="button" class="btn btn-primary" (click)="toggleshowDatabasePage()">Database </button>
+                        </span>
+                    </div>               
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-box' ></i>
+                         <span class="nav-item">Database Storage</span>
+                    </a>
+                    <div>
+                        <span class="tooltip">
+                          <button type="button" class="btn btn-primary" (click)="toggleshowInventory()">Database Storage</button>
+                        </span>
+                    </div>               
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-bell' ></i>
+                        <span class="nav-item">Announcements</span>
+                    </a>
+                    <div>
+                        <span class="tooltip">
+                          <button type="button" class="btn btn-primary" (click)="toggleshowAnnouncements()">Announcements</button>
+                        </span>
+                    </div> 
                 </li>
                 <li>
                     <a href="#">
@@ -45,10 +70,13 @@
                     <a href="#">
                         <i class='bx bx-task' ></i>
                         <span class="nav-item">New Rescuer</span>
-                       <!--<button type="button" class="btn btn-primary" [routerLink]="['/newRescuerForm']">New Rescuer</button>  -->            
                     </a>
-                    <span class="tooltip"><button type="button" class="btn btn-primary" [routerLink]="['/newRescuerForm']">New Rescuer</button></span>
-                 </li>
+                    <div>
+                        <span class="tooltip">
+                          <button type="button" class="btn btn-primary" (click)="toggleshowNewRescuerPage()">New Rescuer</button>
+                        </span>
+                    </div>                    
+                </li>
                  <li>
                     <a>
                         <i class='bx bxs-bus' ></i>
@@ -73,6 +101,13 @@
     <mat-sidenav-content>
         <!-- Κουμπί για να ανοίγει/κλείνει το sidebar -->
         <p><button mat-button (click)="sidenav.toggle()"><i class="bx bx-menu" id="btn"></i></button></p>
+
+        <div *ngIf="showDatabasePage"><app-databasecategories></app-databasecategories></div>
+        <div *ngIf="showNewRescuerPage"><app-new-rescuer></app-new-rescuer></div>
+        <div *ngIf="showAnnouncements"><app-announcements></app-announcements></div>
+        <div *ngIf="showInventory"><app-inventory></app-inventory></div>
+        
+
 
         <div class="main-content">
             <div class="container">

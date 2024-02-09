@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New Rescuer Form</title>
+        <link rel="stylesheet" href="databasecategories.component.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <div class="container">
+            <button type="submit" class="btn-primary mt-4 btn-container" (click)="toggleshowDatabasePage()"> View Categories </button>
+            <button type="submit" class="btn-primary btn-container" (click)="toggleshowNewRescuerPage()"> View Tasks </button>
+        </div>
+
+        <div *ngIf="showCategoriesPage"><app-admin-menu></app-admin-menu></div>
+        <div *ngIf="showDbTaskPage"><app-task-menu></app-task-menu></div>
+
+
+    </body>
+    

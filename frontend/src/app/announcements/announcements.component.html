@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
      
-    <title>Requests Page</title>
+    <title>Announcements</title>
 </head>
 <body>
    
     <div class="container text-center mt-4">
         <p style="text-align: center; font-size: 20px; font-weight: bold;">
-            {{loginDataService.filteredUsers[0]?.firstname}} Requests
+          Administrator Announcements
         </p>
         
         <div class="row d-flex">
@@ -26,9 +26,7 @@
         </div>
         <div class="row d-flex mt-3">
             <div class="col-md-4 offset-md-4">
-                <label for="numberOfPeople">Number of People:</label>
-                <input type="number" [(ngModel)]="numberOfPeople" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="People in distress" required>
-                <button type="button" (click)="submitRequest()" class="btn btn-primary mt-2">Submit Request</button>
+                <button type="button" (click)="submitAnnouncement()" class="btn btn-primary mt-2">Add Announcement</button>
             </div>
         </div>
         <table class="table table-white table-hover" id="datatableexample">

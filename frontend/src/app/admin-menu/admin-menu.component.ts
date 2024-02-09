@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-admin-menu',
+  standalone:true, 
   templateUrl: './admin-menu.component.html',
+  imports:[FormsModule,CommonModule],
   styleUrls: ['./admin-menu.component.css']
 })
 export class AdminMenuComponent {
@@ -21,6 +25,9 @@ export class AdminMenuComponent {
   selectedProduct: any;
   selectedProductQuantity: number | undefined;
   formVisible: boolean = false;
+
+
+
   ngOnInit(): void
   {
     this.category();
@@ -102,4 +109,7 @@ export class AdminMenuComponent {
       
 
     }
+
+  
+
   }
