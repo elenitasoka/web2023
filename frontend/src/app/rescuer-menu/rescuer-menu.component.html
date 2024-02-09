@@ -33,7 +33,11 @@
                         <i class='bx bxs-map-pin' ></i>
                         <span class="nav-item">Maps</span>
                     </a>
-                    <span class="tooltip"><button type="button" class="btn btn-primary" [routerLink]="['/']">Maps</button></span>
+                    <div>
+                        <span class="tooltip">
+                          <button type="button" class="btn btn-primary" (click)="toggleNewMapPage()">Map</button>
+                        </span>
+                    </div> 
                 </li>
                 <li>
                     <a href="#">
@@ -76,6 +80,7 @@
         <!--gia na emfanistei to taskpage panw apo tin eikona sto idio page-->
         <div *ngIf="showTaskPage"><app-rescuer-tasks-menu></app-rescuer-tasks-menu></div>
         <div *ngIf="showVehicleCargo"><app-rescuer-vehicle-cargo></app-rescuer-vehicle-cargo></div>
+        <div *ngIf="showMap"><app-new-map></app-new-map></div>
 
         <div class="main-content">
             <div class="container">

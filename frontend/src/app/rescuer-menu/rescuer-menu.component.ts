@@ -13,12 +13,13 @@ import { RouterModule } from '@angular/router';
 import { RescuerTasksMenuComponent } from '../rescuer-tasks-menu/rescuer-tasks-menu.component';
 import { CommonModule } from '@angular/common';
 import { RescuerVehicleCargoComponent } from '../rescuer-vehicle-cargo/rescuer-vehicle-cargo.component';
+import { NewMapComponent } from '../new-map/new-map.component';
 
 
 @Component({
   selector: 'app-rescuer-menu',
   standalone: true,
-  imports: [RescuerVehicleCargoComponent, CommonModule, RescuerTasksMenuComponent, ListViewModule,SidebarModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,MatSidenavModule,FormsModule,ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule, RouterModule],
+  imports: [NewMapComponent,RescuerVehicleCargoComponent, CommonModule, RescuerTasksMenuComponent, ListViewModule,SidebarModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,MatSidenavModule,FormsModule,ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule, RouterModule],
   templateUrl: './rescuer-menu.component.html',
   styleUrls: ['./rescuer-menu.component.css']
 })
@@ -29,6 +30,7 @@ export class RescuerMenuComponent {
   showRequestsAndOffers: boolean = false;
   showTaskPage: boolean = false;
   showVehicleCargo: boolean = false;
+  showMap:boolean = false;
 
   showData(){ //sunarthsh gia na emfanisei ta stoixeia tou xrhsth sto console
     console.log("edwpera:",this.loginDataService.filteredUsers);
@@ -50,4 +52,7 @@ export class RescuerMenuComponent {
       this.showVehicleCargo = !this.showVehicleCargo;
     }
 
+    toggleNewMapPage() {
+      this.showMap = !this.showMap;
+    }
 }
