@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     
+    <title>Announcements</title>
+</head>
+<body>
+   
+    <div class="container text-center mt-4">
+        <p style="text-align: center; font-size: 20px; font-weight: bold;">
+          Administrator Announcements
+        </p>
+        
+        <div class="row d-flex">
+            <!-- Πεδίο αναζήτησης -->
+            <div class="col-md-4 offset-md-4">
+                <input class="form-control mt-2 mb-2" type="text" [(ngModel)]="searchText" (input)="Search()" placeholder="Search by product" required />
+            </div>
+            <!-- Πεδίο "Number of People" και κουμπί "Submit Request" -->
+            
+        </div>
+        <div class="row d-flex mt-3">
+            <div class="col-md-4 offset-md-4">
+                <button type="button" (click)="submitAnnouncement()" class="btn btn-primary mt-2">Add Announcement</button>
+            </div>
+        </div>
+        <table class="table table-white table-hover" id="datatableexample">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+            
+              </tr>
+          </thead>
+          <tbody>
+              
+                  <tr *ngFor="let group of listOfProducts" >
+                      <td>{{group.id}}</td>
+                      <td (click)="onProductNameClick(group)"> {{group.name}} </td>
+                   </tr>
+                   
+          </tbody>
+        </table>
+        </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+   
+</body>
+</html>

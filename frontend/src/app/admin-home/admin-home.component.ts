@@ -13,12 +13,14 @@ import { CommonModule } from '@angular/common';
 import { AdminMenuComponent } from '../admin-menu/admin-menu.component';
 import { NewRescuerComponent } from '../new-rescuer/new-rescuer.component';
 import { DatabasecategoriesComponent } from '../databasecategories/databasecategories.component';
+import { AnnouncementsComponent } from '../announcements/announcements.component';
+import { InventoryComponent } from '../inventory/inventory.component';
 
 
 @Component({
   selector: 'app-admin-home',
   standalone: true,
-  imports: [DatabasecategoriesComponent, NewRescuerComponent, AdminMenuComponent, CommonModule, ListViewModule,SidebarModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,MatSidenavModule,FormsModule,ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule, RouterModule],
+  imports: [InventoryComponent, AnnouncementsComponent, DatabasecategoriesComponent, NewRescuerComponent, AdminMenuComponent, CommonModule, ListViewModule,SidebarModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,MatSidenavModule,FormsModule,ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule, RouterModule],
   templateUrl: './admin-home.component.html',
   styleUrl: './admin-home.component.css'
 })
@@ -31,6 +33,8 @@ export class AdminHomeComponent {
   showRequestsAndOffers: boolean = false;
   showDatabasePage: boolean = false;
   showNewRescuerPage: boolean = false;
+  showAnnouncements: boolean = false;
+  showInventory: boolean = false;
 
 
   //gia na emfanizontai ta diaforetika components sto idio page
@@ -42,5 +46,11 @@ export class AdminHomeComponent {
     this.showNewRescuerPage = !this.showNewRescuerPage;
   }
 
+  toggleshowAnnouncements(){
+    this.showAnnouncements =!this.showAnnouncements;
+  }
+  toggleshowInventory(){
+    this.showInventory=!this.showInventory;
+  }
 
 }

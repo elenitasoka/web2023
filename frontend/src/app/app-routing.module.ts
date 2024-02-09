@@ -21,6 +21,8 @@ import { RescuerTasksMenuComponent } from './rescuer-tasks-menu/rescuer-tasks-me
 import { RescuerVehicleCargoComponent } from './rescuer-vehicle-cargo/rescuer-vehicle-cargo.component';
 import { TaskMenuComponent } from './task-menu/task-menu.component';
 import { DatabasecategoriesComponent } from './databasecategories/databasecategories.component';
+import { AnnouncementsComponent } from './announcements/announcements.component';
+import { InventoryComponent } from './inventory/inventory.component';
 
 const routes: Routes = [
   {
@@ -112,6 +114,14 @@ const routes: Routes = [
     path:"Databasecategories",
     component:DatabasecategoriesComponent
    },
+   {
+    path:"announcements",
+    component:AnnouncementsComponent
+   },
+   {path:"inventory",
+   component:InventoryComponent
+  }
+
 
 
 

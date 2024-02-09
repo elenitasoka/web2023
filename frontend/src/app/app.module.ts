@@ -30,6 +30,8 @@ import { RescuerVehicleCargoComponent } from './rescuer-vehicle-cargo/rescuer-ve
 import { TaskMenuComponent } from './task-menu/task-menu.component';
 import { AdminComponent } from './admin/admin.component';
 import { DatabasecategoriesComponent } from './databasecategories/databasecategories.component';
+import { AnnouncementsComponent } from './announcements/announcements.component';
+import { InventoryComponent } from './inventory/inventory.component';
 
 
 @NgModule({
@@ -41,8 +43,7 @@ import { DatabasecategoriesComponent } from './databasecategories/databasecatego
     MapComponent,
     RequestpageComponent,
     RescuerLoginComponent,
-    FirstPageComponent,
-    AdminComponent    
+    FirstPageComponent 
   ],
   
   imports: [

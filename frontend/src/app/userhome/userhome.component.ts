@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { FormsModule } from '@angular/forms';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -11,8 +11,6 @@ import { ListViewModule } from '@syncfusion/ej2-angular-lists';
 import { loginData } from '../login/loginData.component';
 import { RouterModule } from '@angular/router';
 import { AdminMenuComponent } from '../admin-menu/admin-menu.component';
-
-
 import { ReqpageComponent } from '../reqpage/reqpage.component';
 import { CommonModule } from '@angular/common';
 import { OffersComponent } from '../offers/offers.component';
@@ -21,7 +19,7 @@ import { OffersComponent } from '../offers/offers.component';
   selector: 'app-userhome',
   standalone: true,
  
-  imports: [CommonModule, ReqpageComponent, ListViewModule,SidebarModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,MatSidenavModule,FormsModule,ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule,RouterModule],
+  imports: [OffersComponent, CommonModule, ReqpageComponent, ListViewModule,SidebarModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,MatSidenavModule,FormsModule,ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule,RouterModule],
   templateUrl: './userhome.component.html',
 
   styleUrls: ['./userhome.component.css']
@@ -37,7 +35,7 @@ export class UserhomeComponent {
   
   showData(){ //sunarthsh gia na emfanisei ta stoixeia tou xrhsth sto console
     console.log("user data:",this.loginDataService.filteredUsers);
-  
+
   } 
   
   ngOnInit() : void{
@@ -58,6 +56,7 @@ export class UserhomeComponent {
   toggleshowOffersPage(){
     this.showOffersPage =!this.showOffersPage;
   }
+  
 
 
  
