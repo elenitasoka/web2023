@@ -10,8 +10,8 @@
     imports:[CommonModule,FormsModule],
     templateUrl: './reqpage.component.html',
     styleUrls: ['./reqpage.component.css'],
-    standalone:true,
-    imports:[CommonModule,FormsModule],
+  
+   
   })
   export class ReqpageComponent {
     title = 'angular13';

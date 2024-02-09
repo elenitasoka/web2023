@@ -48,8 +48,8 @@ import { InventoryComponent } from './inventory/inventory.component';
     RequestpageComponent,
     RescuerLoginComponent,
     FirstPageComponent,
-    NewRescuerComponent,
-    OffersComponent,
+   
+    
     
     
 

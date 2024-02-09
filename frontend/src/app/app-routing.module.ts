@@ -104,6 +104,7 @@ const routes: Routes = [
   {
     path:"rescuerTaskMenu",
     component:OffersComponent
+  },
   {
     path:"rescuerTaskMenu",
     component:RescuerTasksMenuComponent
