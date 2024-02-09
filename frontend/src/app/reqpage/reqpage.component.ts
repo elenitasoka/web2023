@@ -9,7 +9,9 @@
     standalone:true,
     imports:[CommonModule,FormsModule],
     templateUrl: './reqpage.component.html',
-    styleUrls: ['./reqpage.component.css']
+    styleUrls: ['./reqpage.component.css'],
+  
+   
   })
   export class ReqpageComponent {
     title = 'angular13';
@@ -21,6 +23,10 @@
     //i: number = 1;
     Fname:any;
     email:any;
+
+    showData(){ //sunarthsh gia na emfanisei ta stoixeia tou xrhsth sto console
+      console.log("user data:",this.loginDataService.filteredUsers);
+    } 
 
     constructor(private http: HttpClient,public loginDataService: loginData){
       //get request from web api
@@ -86,8 +92,8 @@
           Email: this.email, // 
           ReqDate: new Date(), // Σημερινή ημερωμηνία
           ProductId: selectedGroup.id, //χρήση του id με βάση το name που αναζητησε ο χρήστης
-          "ProductName": this.searchText, // Χρησιμοποιούμε την τιμή από την αναζήτηση
-          "Ammount": this.numberOfPeople, // Χρησιμοποιούμε την τιμή από το numberOfPeople
+          ProductName: this.searchText, // Χρησιμοποιούμε την τιμή από την αναζήτηση
+          Ammount: this.numberOfPeople, // Χρησιμοποιούμε την τιμή από το numberOfPeople
           PickupDate: '', 
           Status: false, 
           Vname: '' 

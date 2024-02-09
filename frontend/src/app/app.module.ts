@@ -26,11 +26,16 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { NewMapComponent } from './new-map/new-map.component';
 import { OffersComponent } from './offers/offers.component';
 import { RescuerTasksMenuComponent } from './rescuer-tasks-menu/rescuer-tasks-menu.component';
-import { RescuerMenuComponent } from './rescuer-menu/rescuer-menu.component';
 import { RescuerVehicleCargoComponent } from './rescuer-vehicle-cargo/rescuer-vehicle-cargo.component';
-import { AdminComponent } from './admin/admin.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { ActivitiesComponent } from './activities/activities.component';
+import { ChartsComponent } from './charts/charts.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { TaskMenuComponent } from './task-menu/task-menu.component';
+import { AdminComponent } from './admin/admin.component';
+import { DatabasecategoriesComponent } from './databasecategories/databasecategories.component';
+import { AnnouncementsComponent } from './announcements/announcements.component';
+import { InventoryComponent } from './inventory/inventory.component';
 
 
 @NgModule({
@@ -43,9 +48,13 @@ import { TaskMenuComponent } from './task-menu/task-menu.component';
     RequestpageComponent,
     RescuerLoginComponent,
     FirstPageComponent,
-    NewRescuerComponent,
-    OffersComponent
+   
     
+    
+    
+
+    
+    FirstPageComponent 
   ],
   
   imports: [
@@ -58,7 +67,8 @@ import { TaskMenuComponent } from './task-menu/task-menu.component';
     MatIconModule,
     MatListModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     provideAnimationsAsync()

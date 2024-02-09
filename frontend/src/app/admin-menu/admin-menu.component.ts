@@ -25,6 +25,9 @@ export class AdminMenuComponent {
   selectedProduct: any;
   selectedProductQuantity: number | undefined;
   formVisible: boolean = false;
+
+
+
   ngOnInit(): void
   {
     this.category();
@@ -106,4 +109,7 @@ export class AdminMenuComponent {
       
 
     }
+
+  
+
   }

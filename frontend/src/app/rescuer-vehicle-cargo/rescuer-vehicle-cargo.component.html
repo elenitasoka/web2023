@@ -12,15 +12,15 @@
   <table class="table table-striped table-bordered table-sm">
     <thead>
       <tr>
-        <th>Vehicle Cargo</th>
+        <th> {{loginDataService.filteredUsers[0]?.usename}} Vehicle Cargo</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let Vehicle of filteredOffers; let i = index">
-        <td>{{ i + 1 }}. Offer-Vehicle Cargo-> Product: {{ Vehicle.ProductName }}  Ammount: {{ Vehicle.Ammount }}</td>
+        <td>{{ i + 1 }}. Offer-Vehicle Cargo-> Product: {{ Vehicle.ProductName }},  Ammount: {{ Vehicle.Ammount }}</td>
       </tr>
       <tr *ngFor="let Vehicle of filteredRequests; let i = index">
-        <td>{{ i + 1 }}. Request-Vehicle Cargo-> Product: {{ Vehicle.ProductName }}  Ammount: {{ Vehicle.Ammount }}</td>
+        <td>{{ i + 1 }}. Request-Vehicle Cargo-> Product: {{ Vehicle.ProductName }},  Ammount: {{ Vehicle.Ammount }}</td>
       </tr>
     </tbody>
   </table>
