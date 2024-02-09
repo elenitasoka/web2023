@@ -33,6 +33,11 @@
                         <i class='bx bxs-lock-alt' ></i>
                     </div>
 
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="address" [ngModelOptions]="{standalone: true}" class="form-control" id="address " placeholder="address" required>
+                        <i class='bx bxs-lock-alt' ></i>
+                    </div>
+
                     <button type="submit" class="btn-primary mt-4" (click)="save()"> Save </button>
                     <div class="login-link">
                         <p>Already have an account? <a [routerLink]="['/login']">Login</a></p>
