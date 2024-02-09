@@ -1,0 +1,16 @@
+
+<div>
+  <canvas id="myChart"></canvas>
+</div>
+
+<div class="col-md-4 offset-md-4">
+  <label for="selectedDate">From:</label>
+  <input type="date" [(ngModel)]="StartDate" class="form-control" required>
+  
+</div>
+<div class="col-md-4 offset-md-4">
+  <label for="selectedDate">Until:</label>
+  <input type="date" [(ngModel)]="EndDate" class="form-control" required>
+  <button type="button" (click)="getData(StartDate, EndDate)" class="btn btn-primary mt-2">Show
+  </button>
+</div>

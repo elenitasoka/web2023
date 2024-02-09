@@ -20,6 +20,8 @@ import { OffersComponent } from './offers/offers.component';
 import { RescuerTasksMenuComponent } from './rescuer-tasks-menu/rescuer-tasks-menu.component';
 import { RescuerVehicleCargoComponent } from './rescuer-vehicle-cargo/rescuer-vehicle-cargo.component';
 import { TaskMenuComponent } from './task-menu/task-menu.component';
+import { ActivitiesComponent } from './activities/activities.component';
+import { ChartsComponent } from './charts/charts.component';
 import { DatabasecategoriesComponent } from './databasecategories/databasecategories.component';
 import { AnnouncementsComponent } from './announcements/announcements.component';
 import { InventoryComponent } from './inventory/inventory.component';
@@ -98,6 +100,11 @@ const routes: Routes = [
    path:"offers",
    component:OffersComponent
   },
+
+  {
+    path:"rescuerTaskMenu",
+    component:OffersComponent
+  },
   {
     path:"rescuerTaskMenu",
     component:RescuerTasksMenuComponent
@@ -107,8 +114,21 @@ const routes: Routes = [
     component:RescuerVehicleCargoComponent
    },
    {
-    path:"taskMenu",
+    path:"rescuerTasksMenu",
+    component:RescuerTasksMenuComponent
+   },
+   {
+    path:"tasksMenu",
     component:TaskMenuComponent
+   }, 
+
+   {
+     path:'activities',
+     component: ActivitiesComponent
+   },
+   {
+   path:'chart',
+    component:ChartsComponent
    },
    {
     path:"Databasecategories",
