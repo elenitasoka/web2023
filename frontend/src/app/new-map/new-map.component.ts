@@ -28,6 +28,8 @@ export class NewMapComponent {
   filteredRecuest: any[] = [];
   taskDetails:any[] = [];
   visible: boolean = false;
+  UnloadOffers:any[] = [];
+  
 
   ngOnInit() {
     this.initializeMap();
@@ -268,6 +270,29 @@ export class NewMapComponent {
   
     
     }
+    async UnloadTask(){
+      const Vname=this.loginDataService.filteredUsers[0].Vname
+    
+      const tasks = await fetch('http://localhost:9992/task');
+      const tasksData = await tasks.json();
+      console.log(tasksData)
+      for( const task of tasksData.data){
+        if(task.Vname==Vname){
+          console.log(task.Vname)
+          const offersResponse = await fetch(`http://localhost:9992/offers`);
+          const offersData = await offersResponse.json();
+         
+          this.UnloadOffers = offersData.data.filter((offer: any) => offer.OfferID ===task.taskID);
+          console.log(this.UnloadOffers)
+      
+          
+      
+        }
+      }
+  
+
+    }
+    
   
 
   

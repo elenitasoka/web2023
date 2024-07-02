@@ -15,12 +15,12 @@ import { NewRescuerComponent } from '../new-rescuer/new-rescuer.component';
 import { DatabasecategoriesComponent } from '../databasecategories/databasecategories.component';
 import { AnnouncementsComponent } from '../announcements/announcements.component';
 import { InventoryComponent } from '../inventory/inventory.component';
-
+import { NewMapComponent } from '../new-map/new-map.component';
 
 @Component({
   selector: 'app-admin-home',
   standalone: true,
-  imports: [InventoryComponent, AnnouncementsComponent, DatabasecategoriesComponent, NewRescuerComponent, AdminMenuComponent, CommonModule, ListViewModule,SidebarModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,MatSidenavModule,FormsModule,ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule, RouterModule],
+  imports: [NewMapComponent,InventoryComponent, AnnouncementsComponent, DatabasecategoriesComponent, NewRescuerComponent, AdminMenuComponent, CommonModule, ListViewModule,SidebarModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,MatSidenavModule,FormsModule,ButtonModule, CheckBoxModule, RadioButtonModule, SwitchModule, ChipListModule, FabModule, SpeedDialModule, RouterModule],
   templateUrl: './admin-home.component.html',
   styleUrl: './admin-home.component.css'
 })
@@ -35,6 +35,7 @@ export class AdminHomeComponent {
   showNewRescuerPage: boolean = false;
   showAnnouncements: boolean = false;
   showInventory: boolean = false;
+  showMap: boolean = false; // Προσθήκη του χάρτη
 
 
   //gia na emfanizontai ta diaforetika components sto idio page
@@ -52,5 +53,7 @@ export class AdminHomeComponent {
   toggleshowInventory(){
     this.showInventory=!this.showInventory;
   }
-
+  toggleNewMapPage() { 
+    this.showMap = !this.showMap;
+  }
 }

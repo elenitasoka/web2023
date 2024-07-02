@@ -16,7 +16,7 @@ export class FirstPageComponent {
 
   navigateToPage() {
     if (this.userType === 'Administrator') {
-      this.router.navigate(['/adminHome']);  
+      this.router.navigate(['/loginAdmin']);  
     } else if (this.userType === 'Rescuer') {
       this.router.navigate(['rescuer-login']);  
     } else if (this.userType === 'User') {

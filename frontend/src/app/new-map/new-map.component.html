@@ -16,7 +16,7 @@
   <!-- current-tasks.component.html -->
   <div *ngIf="visible">
     <button  >Φόρτωση</button>
-    <button >Εκφόρτωση</button>
+    <button (click)="UnloadTask()">Εκφόρτωση</button>
   </div>
   
 <div id="currentTasksPanel">
@@ -38,8 +38,24 @@
     </ul>
   </div>
   
-   
+  <div *ngIf="UnloadTask">
+    
+    <table class="table table-striped table-bordered table-sm">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Ammount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let offerr of UnloadOffers; let i = index">
+          <td>{{ offerr.ProductName }}</td>
+          <td>{{ offerr.Ammount }}</td>
+        </tr>
+      </tbody>
+    </table>
   
+  </div>
 
 
 <div id="map"></div>

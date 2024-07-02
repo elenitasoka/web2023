@@ -64,7 +64,9 @@
                         <i class='bx bxs-map-pin' ></i>
                         <span class="nav-item">Maps</span>
                     </a>
-                    <span class="tooltip"><button type="button" class="btn btn-primary" [routerLink]="['/']">Maps</button></span>
+                    <span class="tooltip">
+                        <button type="button" class="btn btn-primary" (click)="toggleNewMapPage()">Map</button>
+                      </span>
                 </li>
                 <li>
                     <a href="#">

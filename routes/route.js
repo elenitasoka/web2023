@@ -67,5 +67,6 @@ router.route('/announcement/create').post(announcementController.AddAnnouncement
 
 router.route('/admin').get(adminController.getAdmin);
 router.route('/admin/create').post(adminController.AddAdmin);
+router.route('/admin/login').post(adminController.loginAdminControllerFn);
 module.exports=router;
 

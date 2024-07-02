@@ -36,6 +36,7 @@ import { AdminComponent } from './admin/admin.component';
 import { DatabasecategoriesComponent } from './databasecategories/databasecategories.component';
 import { AnnouncementsComponent } from './announcements/announcements.component';
 import { InventoryComponent } from './inventory/inventory.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 
 @NgModule({
@@ -69,6 +70,7 @@ import { InventoryComponent } from './inventory/inventory.component';
     MatButtonModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    AdminLoginComponent
   ],
   providers: [
     provideAnimationsAsync()

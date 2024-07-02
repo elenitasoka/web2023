@@ -25,6 +25,7 @@ import { ChartsComponent } from './charts/charts.component';
 import { DatabasecategoriesComponent } from './databasecategories/databasecategories.component';
 import { AnnouncementsComponent } from './announcements/announcements.component';
 import { InventoryComponent } from './inventory/inventory.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 const routes: Routes = [
   {
@@ -140,6 +141,10 @@ const routes: Routes = [
    },
    {path:"inventory",
    component:InventoryComponent
+  },
+  {
+    path:"loginAdmin",
+    component:AdminLoginComponent
   }
 
 
