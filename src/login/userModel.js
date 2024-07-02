@@ -19,10 +19,6 @@ var userSchema = new Schema({
         type: String,
         required: true
     },
-    role: {
-        type: String,
-        required: true
-    },
     address:{
         type: String,
         required: true
